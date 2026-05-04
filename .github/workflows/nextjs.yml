@@ -54,13 +54,12 @@ jobs:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
       - name: Setup Pages
+        # `static_site_generator: next` is intentionally NOT set here. Letting
+        # the action auto-inject basePath fights with our next.config.mjs (which
+        # reads NEXT_PUBLIC_BASE_PATH) and produced a build hard-coded to
+        # /M-ONT-web/ even after the custom domain was configured. We control
+        # basePath explicitly via the env block on the build step below.
         uses: actions/configure-pages@v5
-        with:
-          # Automatically inject basePath in your Next.js configuration file and disable
-          # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
-          #
-          # You may remove this line if you want to manage the configuration yourself.
-          static_site_generator: next
       - name: Restore cache
         uses: actions/cache@v4
         with:
@@ -74,6 +73,13 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
+        # The site is served at https://www.m-ont.org/ (see public/CNAME), so
+        # NEXT_PUBLIC_BASE_PATH must be empty for asset URLs to resolve at
+        # root. To temporarily fall back to https://mmbai-lab.github.io/M-ONT-
+        # web/ (e.g. while DNS is being changed), set NEXT_PUBLIC_BASE_PATH:
+        # /M-ONT-web here.
+        env:
+          NEXT_PUBLIC_BASE_PATH: ""
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
