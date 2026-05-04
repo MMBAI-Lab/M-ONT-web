@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Palette derived from the M-ONT logo (blue → cyan → yellow → orange →
+   coral). Primary accent is the cyan-blue dominant on the logo's left
+   half; warm tones from the right half are used as gradient stops in
+   titles and decorative accents (see HomePage hero). Channel triplets
+   so Tailwind alpha modifiers work (e.g. `bg-bg/80`). */
+:root {
+  --bg:           255 255 255;
+  --surface:      248 250 252;
+  --elevated:     241 245 249;
+  --border:       226 232 240;
+  --ink:          15 23 42;
+  --muted:        71 85 105;
+  --subtle:       100 116 139;
+  --accent:       14 116 144;
+  --accent-hover: 8 145 178;
+  --accent-dark:  21 94 117;
+
+  color-scheme: light;
+}
+
+:root {
+  --font-sans: "Inter", "Segoe UI", system-ui, sans-serif;
+  --font-serif: "Source Serif 4", "Georgia", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: rgb(var(--bg));
+}
+
+body {
+  @apply bg-bg text-ink antialiased;
+}
+
+a {
+  @apply transition-colors;
+}
+
+::selection {
+  background: rgb(var(--accent));
+  color: white;
+}
