@@ -14,7 +14,7 @@ npm run build    # static export to out/
 
 There is no test suite. There is no separate lint step beyond `next build` (which type-checks and lints). The dev server is the fastest signal for visual / runtime regressions.
 
-Deploys are automatic: pushing to `main` triggers `.github/workflows/deploy.yml` (Pages via Actions). The workflow sets `NEXT_PUBLIC_BASE_PATH=/M-ONT-web` so assets resolve at `mmbai-lab.github.io/M-ONT-web/`. When a custom domain is configured, add a `CNAME` file under `public/` and remove that env block from the workflow.
+Deploys are automatic: pushing to `main` triggers `.github/workflows/nextjs.yml` (Pages via Actions, the standard GitHub-provided template). It uses `actions/configure-pages@v5` with `static_site_generator: next`, which auto-sets `NEXT_PUBLIC_BASE_PATH` from the repo's Pages config — empty when a custom domain is set under Settings → Pages, `/M-ONT-web` otherwise. The site is served from the custom domain **www.m-ont.org** (see `public/CNAME`).
 
 ## Translation-parity rule (BLOCKING)
 

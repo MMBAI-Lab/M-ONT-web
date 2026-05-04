@@ -31,7 +31,9 @@ There is no separate test suite or lint step beyond `next build`, which type-che
 
 ## Deployment
 
-[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) builds and publishes to GitHub Pages on every push to `main`. The workflow sets `NEXT_PUBLIC_BASE_PATH=/M-ONT-web` so the site is served correctly from `https://mmbai-lab.github.io/M-ONT-web/`. To move to a custom domain at the apex (e.g. `m-ont.org`), drop the env block from the workflow and add a `CNAME` file under `public/`.
+[`.github/workflows/nextjs.yml`](.github/workflows/nextjs.yml) builds and publishes to GitHub Pages on every push to `main`. It uses `actions/configure-pages@v5` with `static_site_generator: next`, which automatically sets `NEXT_PUBLIC_BASE_PATH` based on the repo's Pages configuration: when a **custom domain** is set under _Settings → Pages_, the action publishes assets at root; when not, it injects `/M-ONT-web` so the site works at `https://mmbai-lab.github.io/M-ONT-web/`.
+
+The site is served from the custom domain **https://www.m-ont.org/** — see [`public/CNAME`](public/CNAME). DNS at the registrar should have a `CNAME` record pointing `www.m-ont.org` to `mmbai-lab.github.io`.
 
 ## Site map
 
