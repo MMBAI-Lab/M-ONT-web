@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 import BarsRibbon from "@/components/BarsRibbon";
+import CommitteeSection from "@/components/pages/CommitteeSection";
 import { localizePath, type Lang } from "@/lib/i18n";
 import { HOME } from "@/data/content/home";
 import { asset } from "@/lib/asset";
@@ -207,6 +208,9 @@ export default function HomePage({ lang }: { lang: Lang }) {
           </div>
         </div>
       </section>
+
+      {/* ORGANIZING COMMITTEE */}
+      <CommitteeSection lang={lang} />
     </>
   );
 }

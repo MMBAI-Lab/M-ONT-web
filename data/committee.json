@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Victoria Calzada",
+    "institutions": ["Universidad de la República"],
+    "country": "Uruguay",
+    "iso": "uy",
+    "photo": "VictoriaCalzada.jpg",
+    "group": "national"
+  },
+  {
+    "name": "Juan Pablo Tosar",
+    "institutions": ["Institut Pasteur de Montevideo", "Universidad de la República"],
+    "country": "Uruguay",
+    "iso": "uy",
+    "photo": "JuanPabloTosar.webp",
+    "group": "national"
+  },
+  {
+    "name": "Pablo D. Dans",
+    "institutions": ["Universidad de la República", "Institut Pasteur de Montevideo"],
+    "country": "Uruguay",
+    "iso": "uy",
+    "photo": null,
+    "group": "national"
+  },
+  {
+    "name": "Isabel Aznarez",
+    "institutions": ["Stoke Therapeutics"],
+    "country": "USA",
+    "iso": "us",
+    "photo": "IsabelAznarez.jpg",
+    "group": "international"
+  },
+  {
+    "name": "Alberto Kornblihtt",
+    "institutions": ["Universidad de Buenos Aires"],
+    "country": "Argentina",
+    "iso": "ar",
+    "photo": "AlbertoKornblihtt.jpg",
+    "group": "international"
+  },
+  {
+    "name": "Adrian R. Krainer",
+    "institutions": ["Cold Spring Harbor Laboratory"],
+    "country": "USA",
+    "iso": "us",
+    "photo": "AdrianKrainer.webp",
+    "group": "international"
+  },
+  {
+    "name": "Laura Sepp-Lorenzino",
+    "institutions": ["Intellia Therapeutics"],
+    "country": "USA",
+    "iso": "us",
+    "photo": "LauraSepp.webp",
+    "group": "international"
+  }
+]

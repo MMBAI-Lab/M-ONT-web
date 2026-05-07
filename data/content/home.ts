@@ -17,6 +17,10 @@ export type HomeContent = {
   facts: { label: string; value: string }[];
   quicklinks_title: string;
   quicklinks: { label: string; href: string }[];
+  committee_eyebrow: string;
+  committee_title: string;
+  committee_national: string;
+  committee_international: string;
 };
 
 const en: HomeContent = {
@@ -54,6 +58,10 @@ const en: HomeContent = {
     { label: "Venue & travel", href: "/venue" },
     { label: "Register", href: "/registration" },
   ],
+  committee_eyebrow: "Organizing Committee",
+  committee_title: "The people behind M-ONT.",
+  committee_national: "National",
+  committee_international: "International",
 };
 
 const es: HomeContent = {
@@ -91,6 +99,10 @@ const es: HomeContent = {
     { label: "Sede y viaje", href: "/venue" },
     { label: "Registrarse", href: "/registration" },
   ],
+  committee_eyebrow: "Comité Organizador",
+  committee_title: "Las personas detrás de M-ONT.",
+  committee_national: "Nacional",
+  committee_international: "Internacional",
 };
 
 export const HOME: Record<Lang, HomeContent> = { en, es };
