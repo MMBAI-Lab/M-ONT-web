@@ -33,7 +33,7 @@ const en: CommonDict = {
     contact: "Contact",
   },
   footer: {
-    rights: "M-ONT — Montevideo Workshop on Oligonucleotide Therapeutics.",
+    rights: "M-ONT — Montevideo Workshop in OligoNucleotide and RNA Therapeutics.",
     skyline_credit_pre: "Montevideo skyline by ",
     skyline_credit_author: "Serhii",
     skyline_credit_post: " — Adobe Stock (standard licence).",
@@ -52,7 +52,7 @@ const es: CommonDict = {
     contact: "Contacto",
   },
   footer: {
-    rights: "M-ONT — Workshop de Montevideo de Terapéutica con Oligonucleótidos.",
+    rights: "M-ONT — Workshop de Montevideo de Terapéutica con Oligonucleótidos y ARN.",
     skyline_credit_pre: "Skyline de Montevideo por ",
     skyline_credit_author: "Serhii",
     skyline_credit_post: " — Adobe Stock (licencia estándar).",

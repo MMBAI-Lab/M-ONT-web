@@ -5,15 +5,15 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "M-ONT — Montevideo Workshop on Oligonucleotide Therapeutics",
+    default: "M-ONT — Montevideo Workshop in OligoNucleotide and RNA Therapeutics",
     template: "%s · M-ONT",
   },
   description:
-    "Montevideo Workshop on Oligonucleotide Therapeutics (M-ONT) — an international workshop on the chemistry, biology, and clinical translation of oligonucleotide therapeutics.",
+    "Montevideo Workshop in OligoNucleotide and RNA Therapeutics (M-ONT) — an international workshop on the chemistry, biology, and clinical translation of oligonucleotide and RNA therapeutics.",
   openGraph: {
-    title: "M-ONT — Montevideo Workshop on Oligonucleotide Therapeutics",
+    title: "M-ONT — Montevideo Workshop in OligoNucleotide and RNA Therapeutics",
     description:
-      "International workshop on oligonucleotide therapeutics — chemistry, biology, and clinical translation.",
+      "International workshop on oligonucleotide and RNA therapeutics — chemistry, biology, and clinical translation.",
     siteName: "M-ONT",
     type: "website",
   },
