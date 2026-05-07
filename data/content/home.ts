@@ -20,18 +20,18 @@ export type HomeContent = {
 };
 
 const en: HomeContent = {
-  eyebrow: "Montevideo · 23–27 February 2027 · International School",
+  eyebrow: "Montevideo · 23–26 February 2027 · International Workshop",
   title_pre: "The chemistry, biology, and clinical promise of ",
   title_accent: "oligonucleotide therapeutics",
   title_post: ".",
   intro:
-    "M-ONT is a five-day international school in Montevideo, Uruguay (23–27 February 2027) — bringing together leading scientists, clinicians, and industry voices to teach the design, mechanism, and clinical translation of antisense oligonucleotides, siRNAs, aptamers, splice-switching ASOs, and emerging RNA therapeutics.",
+    "M-ONT is a four-day international workshop in Montevideo, Uruguay (23–26 February 2027) — bringing together leading scientists, clinicians, and industry voices to teach the design, mechanism, and clinical translation of antisense oligonucleotides, siRNAs, aptamers, splice-switching ASOs, and emerging RNA therapeutics.",
   cta_register: "Registration",
   cta_programme: "See programme",
   about_eyebrow: "About M-ONT",
-  about_title: "A five-day, international school on oligo therapeutics.",
+  about_title: "A four-day, international workshop on oligo therapeutics.",
   about_paragraphs: [
-    `M-ONT is the <strong class="text-ink">Montevideo School of Oligonucleotide Therapeutics</strong> — an intensive, internationally focused school covering chemistry, biology, delivery, and clinical translation of oligonucleotide drugs. The programme combines introductory lectures by the organizing committee with research talks from leading invited speakers, plus poster sessions and case-study discussions on landmark approved therapies.`,
+    `M-ONT is the <strong class="text-ink">Montevideo Workshop on Oligonucleotide Therapeutics</strong> — an intensive, internationally focused workshop covering chemistry, biology, delivery, and clinical translation of oligonucleotide drugs. The programme combines introductory lectures by the organizing committee with research talks from leading invited speakers, plus poster sessions and case-study discussions on landmark approved therapies.`,
   ],
   pillars: [
     { kicker: "Chemistry", title: "Backbones, modifications, conjugates" },
@@ -42,7 +42,7 @@ const en: HomeContent = {
   facts_eyebrow: "At a glance",
   facts_title: "What to expect.",
   facts: [
-    { label: "When", value: "23–27 February 2027" },
+    { label: "When", value: "23–26 February 2027" },
     { label: "Format", value: "Lectures, research talks, posters" },
     { label: "Audience", value: "Graduate students, postdocs, clinicians, industry" },
     { label: "Language", value: "English" },
@@ -57,18 +57,18 @@ const en: HomeContent = {
 };
 
 const es: HomeContent = {
-  eyebrow: "Montevideo · 23–27 de febrero de 2027 · Escuela internacional",
+  eyebrow: "Montevideo · 23–26 de febrero de 2027 · Workshop internacional",
   title_pre: "La química, la biología y la promesa clínica de la ",
   title_accent: "terapéutica con oligonucleótidos",
   title_post: ".",
   intro:
-    "M-ONT es una escuela internacional de cinco días en Montevideo, Uruguay (23–27 de febrero de 2027) — reúne a científicos, clínicos y referentes de la industria para enseñar el diseño, los mecanismos y la traslación clínica de oligonucleótidos antisentido, siRNAs, aptámeros, ASOs splice-switching y otras terapias basadas en ARN.",
+    "M-ONT es un workshop internacional de cuatro días en Montevideo, Uruguay (23–26 de febrero de 2027) — reúne a científicos, clínicos y referentes de la industria para enseñar el diseño, los mecanismos y la traslación clínica de oligonucleótidos antisentido, siRNAs, aptámeros, ASOs splice-switching y otras terapias basadas en ARN.",
   cta_register: "Registro",
   cta_programme: "Ver programa",
   about_eyebrow: "Sobre M-ONT",
-  about_title: "Una escuela internacional de cinco días sobre terapéutica con oligonucleótidos.",
+  about_title: "Un workshop internacional de cuatro días sobre terapéutica con oligonucleótidos.",
   about_paragraphs: [
-    `M-ONT es la <strong class="text-ink">Escuela de Montevideo de Terapéutica con Oligonucleótidos</strong> — una escuela intensiva e internacional que cubre la química, la biología, la entrega celular y la traslación clínica de los oligofármacos. El programa combina clases introductorias dictadas por el comité organizador con charlas de investigación de oradores invitados de primer nivel, sesiones de posters y discusiones de casos sobre terapias aprobadas emblemáticas.`,
+    `M-ONT es el <strong class="text-ink">Workshop de Montevideo de Terapéutica con Oligonucleótidos</strong> — un workshop intensivo e internacional que cubre la química, la biología, la entrega celular y la traslación clínica de los oligofármacos. El programa combina clases introductorias dictadas por el comité organizador con charlas de investigación de oradores invitados de primer nivel, sesiones de posters y discusiones de casos sobre terapias aprobadas emblemáticas.`,
   ],
   pillars: [
     { kicker: "Química", title: "Esqueletos, modificaciones, conjugados" },
@@ -79,7 +79,7 @@ const es: HomeContent = {
   facts_eyebrow: "En pocas líneas",
   facts_title: "Qué esperar.",
   facts: [
-    { label: "Cuándo", value: "23–27 de febrero de 2027" },
+    { label: "Cuándo", value: "23–26 de febrero de 2027" },
     { label: "Formato", value: "Clases, charlas de investigación, posters" },
     { label: "Público", value: "Estudiantes de posgrado, postdocs, clínicos, industria" },
     { label: "Idioma", value: "Inglés" },

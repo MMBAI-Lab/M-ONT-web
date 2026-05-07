@@ -40,7 +40,7 @@ const en: SectionsContent = {
     eyebrow: "Venue & travel",
     title: "Montevideo, Uruguay.",
     intro:
-      "The school takes place in Montevideo. Practical information on the venue, accommodation, visa requirements and travel will be posted here.",
+      "The workshop takes place in Montevideo. Practical information on the venue, accommodation, visa requirements and travel will be posted here.",
     placeholder: "Venue and travel details coming soon.",
   },
   registration: {
@@ -85,7 +85,7 @@ const es: SectionsContent = {
     eyebrow: "Sede y viaje",
     title: "Montevideo, Uruguay.",
     intro:
-      "La escuela se realiza en Montevideo. La información práctica sobre la sede, el alojamiento, los requisitos de visa y el viaje se publicará aquí.",
+      "El workshop se realiza en Montevideo. La información práctica sobre la sede, el alojamiento, los requisitos de visa y el viaje se publicará aquí.",
     placeholder: "Detalles de sede y viaje próximamente.",
   },
   registration: {

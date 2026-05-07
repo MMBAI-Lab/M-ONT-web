@@ -1,6 +1,6 @@
-# M-ONT — Montevideo School of Oligonucleotide Therapeutics
+# M-ONT — Montevideo Workshop on Oligonucleotide Therapeutics
 
-Static, bilingual website for **M-ONT**, an international school on the chemistry, biology, delivery, and clinical translation of oligonucleotide therapeutics taking place in **Montevideo, Uruguay, 23–27 February 2027**.
+Static, bilingual website for **M-ONT**, an international workshop on the chemistry, biology, delivery, and clinical translation of oligonucleotide therapeutics taking place in **Montevideo, Uruguay, 23–26 February 2027**.
 
 Organized by [DansLab (MMBAI)](https://www.danslab.xyz) at Universidad de la República, Uruguay.
 

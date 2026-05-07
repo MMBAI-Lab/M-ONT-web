@@ -58,7 +58,7 @@ export default function HomePage({ lang }: { lang: Lang }) {
           <FadeIn delay={0.05}>
             <Image
               src={asset("/figures/MONT_logo.png")}
-              alt="M-ONT — Montevideo School of Oligonucleotide Therapeutics"
+              alt="M-ONT — Montevideo Workshop on Oligonucleotide Therapeutics"
               width={803}
               height={241}
               priority
