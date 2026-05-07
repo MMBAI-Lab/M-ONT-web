@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <!-- Base: 9 equal horizontal stripes, alternating white and blue -->
+  <rect width="900" height="600" fill="white"/>
+  <rect y="66.7"  width="900" height="66.7" fill="#003893"/>
+  <rect y="200"   width="900" height="66.7" fill="#003893"/>
+  <rect y="333.3" width="900" height="66.7" fill="#003893"/>
+  <rect y="466.7" width="900" height="66.7" fill="#003893"/>
+  <!-- White canton covering top 4 stripes (height = 266.7 = 4×66.7) -->
+  <rect width="300" height="266.7" fill="white"/>
+  <!-- Sun of May centred in the canton -->
+  <g transform="translate(150,133.3)">
+    <!-- 16 alternating straight (long) and wavy (short/curved) rays -->
+    <!-- Straight rays at 0°, 45°, 90°, 135°, 180°, 225°, 270°, 315° -->
+    <g fill="#FCD116" stroke="none">
+      <polygon points="0,-95 8,-55 -8,-55"/>
+      <polygon points="0,95 8,55 -8,55"/>
+      <polygon points="-95,0 -55,-8 -55,8"/>
+      <polygon points="95,0 55,-8 55,8"/>
+      <polygon points="-67,-67 -42,-28 -28,-42"/>
+      <polygon points="67,-67 28,-42 42,-28"/>
+      <polygon points="-67,67 -28,42 -42,28"/>
+      <polygon points="67,67 42,28 28,42"/>
+    </g>
+    <!-- Wavy/curved rays at 22.5° offset (short triangles) -->
+    <g fill="#FCD116">
+      <polygon points="0,-70 5,-45 -5,-45"/>
+      <polygon points="0,70 5,45 -5,45"/>
+      <polygon points="-70,0 -45,-5 -45,5"/>
+      <polygon points="70,0 45,-5 45,5"/>
+      <polygon points="-49,-49 -33,-22 -22,-33"/>
+      <polygon points="49,-49 22,-33 33,-22"/>
+      <polygon points="-49,49 -22,33 -33,22"/>
+      <polygon points="49,49 33,22 22,33"/>
+    </g>
+    <!-- Sun face -->
+    <circle r="45" fill="#FCD116"/>
+    <circle r="45" fill="none" stroke="#C8A400" stroke-width="2"/>
+    <!-- Eyes -->
+    <ellipse cx="-13" cy="-8" rx="5" ry="6" fill="#C8A400"/>
+    <ellipse cx="13"  cy="-8" rx="5" ry="6" fill="#C8A400"/>
+    <!-- Nose -->
+    <circle cx="0" cy="3" r="3" fill="#C8A400"/>
+    <!-- Mouth -->
+    <path d="M -15 18 Q 0 30 15 18" stroke="#C8A400" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

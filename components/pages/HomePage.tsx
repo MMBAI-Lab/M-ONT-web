@@ -51,8 +51,18 @@ export default function HomePage({ lang }: { lang: Lang }) {
 
         <div className="relative mx-auto max-w-6xl px-6 pt-10 pb-20 md:pt-14 md:pb-28">
           <FadeIn>
-            <p className="mb-6 text-xs font-semibold uppercase tracking-[0.3em] text-accent">
-              {c.eyebrow}
+            <p className="mb-6 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.3em] text-accent">
+              {/* "Montevideo" is always the first segment; the flag sits right after it. */}
+              {c.eyebrow.split(" · ")[0]}
+              <Image
+                src={asset("/figures/uy.svg")}
+                alt="Uruguay"
+                width={24}
+                height={16}
+                className="inline-block h-[1.1em] w-auto align-middle"
+                aria-hidden="true"
+              />
+              {" · " + c.eyebrow.split(" · ").slice(1).join(" · ")}
             </p>
           </FadeIn>
           <FadeIn delay={0.05}>
