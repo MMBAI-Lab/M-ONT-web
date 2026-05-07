@@ -20,7 +20,7 @@ export type HomeContent = {
 };
 
 const en: HomeContent = {
-  eyebrow: "Montevideo · 23–26 February 2027 · International Workshop",
+  eyebrow: "Montevideo 🇺🇾 · 23–26 February 2027 · International Workshop",
   title_pre: "The chemistry, biology, and clinical promise of ",
   title_accent: "oligonucleotide therapeutics",
   title_post: ".",
@@ -57,7 +57,7 @@ const en: HomeContent = {
 };
 
 const es: HomeContent = {
-  eyebrow: "Montevideo · 23–26 de febrero de 2027 · Workshop internacional",
+  eyebrow: "Montevideo 🇺🇾 · 23–26 de febrero de 2027 · Workshop internacional",
   title_pre: "La química, la biología y la promesa clínica de la ",
   title_accent: "terapéutica con oligonucleótidos",
   title_post: ".",
