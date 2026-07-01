@@ -1,0 +1,36 @@
+{
+  "main": [
+    {
+      "name": "Oligonucleotide Therapeutics Society",
+      "short": "OTS",
+      "url": "https://www.oligotherapeutics.org",
+      "logo": null
+    },
+    {
+      "name": "International Centre for Genetic Engineering and Biotechnology",
+      "short": "ICGEB",
+      "url": "https://www.icgeb.org",
+      "logo": null
+    }
+  ],
+  "other": [
+    {
+      "name": "Facultad de Ciencias, UdelaR",
+      "short": "FCIEN",
+      "url": "https://www.fcien.edu.uy",
+      "logo": null
+    },
+    {
+      "name": "Institut Pasteur de Montevideo",
+      "short": "IPMon",
+      "url": "https://www.pasteur.edu.uy",
+      "logo": null
+    },
+    {
+      "name": "Club del ARN de Uruguay",
+      "short": "Club ARN-UY",
+      "url": null,
+      "logo": null
+    }
+  ]
+}

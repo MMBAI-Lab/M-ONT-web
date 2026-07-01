@@ -1,0 +1,67 @@
+import FadeIn from "@/components/FadeIn";
+import sponsors from "@/data/sponsors.json";
+import { HOME } from "@/data/content/home";
+import type { Lang } from "@/lib/i18n";
+
+export default function SponsorsSection({ lang }: { lang: Lang }) {
+  const c = HOME[lang];
+
+  return (
+    <section className="border-b border-border bg-surface">
+      <div className="mx-auto max-w-6xl px-6 py-20">
+        <FadeIn>
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">
+            {c.sponsors_eyebrow}
+          </p>
+          <h2 className="mt-3 font-serif text-2xl font-semibold tracking-tight text-ink">
+            {c.sponsors_title}
+          </h2>
+        </FadeIn>
+
+        {/* Main sponsors */}
+        <div className="mt-10 flex flex-wrap justify-center gap-6">
+          {sponsors.main.map((s) => (
+            <FadeIn key={s.short}>
+              <a
+                href={s.url ?? "#"}
+                target="_blank"
+                rel="noreferrer"
+                className="flex min-w-[200px] flex-col items-center justify-center gap-2 rounded-xl border border-border bg-bg px-8 py-6 text-center transition hover:border-accent"
+              >
+                {/* Logo placeholder — swap with <Image> once assets are provided */}
+                <span className="font-serif text-2xl font-bold text-accent">
+                  {s.short}
+                </span>
+                <span className="text-xs leading-relaxed text-muted">{s.name}</span>
+              </a>
+            </FadeIn>
+          ))}
+        </div>
+
+        {/* Other sponsors */}
+        {sponsors.other.length > 0 && (
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
+            {sponsors.other.map((s) => (
+              <FadeIn key={s.short}>
+                {s.url ? (
+                  <a
+                    href={s.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-lg border border-border bg-bg px-5 py-3 text-sm font-medium text-muted transition hover:border-accent hover:text-accent"
+                  >
+                    {s.name}
+                  </a>
+                ) : (
+                  <span className="rounded-lg border border-border bg-bg px-5 py-3 text-sm font-medium text-muted">
+                    {s.name}
+                  </span>
+                )}
+              </FadeIn>
+            ))}
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}

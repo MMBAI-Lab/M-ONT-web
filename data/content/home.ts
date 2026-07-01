@@ -17,19 +17,30 @@ export type HomeContent = {
   facts: { label: string; value: string }[];
   quicklinks_title: string;
   quicklinks: { label: string; href: string }[];
+  speakers_eyebrow: string;
+  speakers_title: string;
+  speakers_cta: string;
   committee_eyebrow: string;
   committee_title: string;
   committee_national: string;
   committee_international: string;
+  sponsors_eyebrow: string;
+  sponsors_title: string;
+  abstracts_eyebrow: string;
+  abstracts_title: string;
+  abstracts_body: string;
+  abstracts_open: string;
+  abstracts_fellowship_btn: string;
+  abstracts_abstract_btn: string;
 };
 
 const en: HomeContent = {
-  eyebrow: "Montevideo · 23–26 February 2027 · International Workshop",
+  eyebrow: "Montevideo · 23–27 February 2027 · International Workshop",
   title_pre: "The chemistry, biology, and clinical use of ",
   title_accent: "oligonucleotide and RNA therapeutics",
   title_post: ".",
   intro:
-    "M-ONT is a four-day international workshop in Montevideo, Uruguay (23–26 February 2027) — bringing together leading scientists, clinicians, and industry voices to teach the design, mechanism, and clinical translation of antisense oligonucleotides, siRNAs, aptamers, splice-switching ASOs, and emerging RNA therapeutics.",
+    "M-ONT is a four-day international workshop in Montevideo, Uruguay (23–27 February 2027) — bringing together leading scientists, clinicians, and industry voices to teach the design, mechanism, and clinical translation of antisense oligonucleotides, siRNAs, aptamers, splice-switching ASOs, and emerging RNA therapeutics.",
   cta_register: "Registration",
   cta_programme: "See programme",
   about_eyebrow: "About M-ONT",
@@ -46,7 +57,7 @@ const en: HomeContent = {
   facts_eyebrow: "At a glance",
   facts_title: "What to expect.",
   facts: [
-    { label: "When", value: "23–26 February 2027" },
+    { label: "When", value: "23–27 February 2027" },
     { label: "Format", value: "Lectures, research talks, posters" },
     { label: "Audience", value: "Graduate students, postdocs, clinicians, industry" },
     { label: "Language", value: "English" },
@@ -58,19 +69,31 @@ const en: HomeContent = {
     { label: "Venue & travel", href: "/venue" },
     { label: "Register", href: "/registration" },
   ],
+  speakers_eyebrow: "Confirmed Speakers",
+  speakers_title: "An international faculty.",
+  speakers_cta: "Full speaker list →",
   committee_eyebrow: "Organizing Committee",
   committee_title: "The people behind M-ONT.",
   committee_national: "National",
   committee_international: "International",
+  sponsors_eyebrow: "Main Sponsors",
+  sponsors_title: "Institutions that make M-ONT possible.",
+  abstracts_eyebrow: "Participate",
+  abstracts_title: "Submit an abstract. Apply for a fellowship.",
+  abstracts_body:
+    "Graduate students and postdocs may apply for travel fellowships. Researchers from the region are encouraged to submit abstracts — selected contributions will be featured in the poster session and, potentially, as short talks.",
+  abstracts_open: "Abstract submissions and fellowship applications open 15 July – 31 August 2027.",
+  abstracts_fellowship_btn: "Apply for fellowship",
+  abstracts_abstract_btn: "Submit abstract",
 };
 
 const es: HomeContent = {
-  eyebrow: "Montevideo · 23–26 de febrero de 2027 · Workshop internacional",
+  eyebrow: "Montevideo · 23–27 de febrero de 2027 · Workshop internacional",
   title_pre: "La química, la biología y el uso clínico de ",
   title_accent: "oligonucleótidos y ARN terapéuticos",
   title_post: ".",
   intro:
-    "M-ONT es un workshop internacional de cuatro días en Montevideo, Uruguay (23–26 de febrero de 2027) — reúne a científicos, clínicos y referentes de la industria para enseñar el diseño, los mecanismos y la traslación clínica de oligonucleótidos antisentido, siRNAs, aptámeros, ASOs splice-switching y otras terapias basadas en ARN.",
+    "M-ONT es un workshop internacional de cuatro días en Montevideo, Uruguay (23–27 de febrero de 2027) — reúne a científicos, clínicos y referentes de la industria para enseñar el diseño, los mecanismos y la traslación clínica de oligonucleótidos antisentido, siRNAs, aptámeros, ASOs splice-switching y otras terapias basadas en ARN.",
   cta_register: "Registro",
   cta_programme: "Ver programa",
   about_eyebrow: "Sobre M-ONT",
@@ -87,7 +110,7 @@ const es: HomeContent = {
   facts_eyebrow: "En pocas líneas",
   facts_title: "Qué esperar.",
   facts: [
-    { label: "Cuándo", value: "23–26 de febrero de 2027" },
+    { label: "Cuándo", value: "23–27 de febrero de 2027" },
     { label: "Formato", value: "Clases, charlas de investigación, posters" },
     { label: "Público", value: "Estudiantes de posgrado, postdocs, clínicos, industria" },
     { label: "Idioma", value: "Inglés" },
@@ -99,10 +122,22 @@ const es: HomeContent = {
     { label: "Sede y viaje", href: "/venue" },
     { label: "Registrarse", href: "/registration" },
   ],
+  speakers_eyebrow: "Oradores Confirmados",
+  speakers_title: "Un cuerpo docente internacional.",
+  speakers_cta: "Lista completa de oradores →",
   committee_eyebrow: "Comité Organizador",
   committee_title: "Las personas detrás de M-ONT.",
   committee_national: "Nacional",
   committee_international: "Internacional",
+  sponsors_eyebrow: "Sponsors Principales",
+  sponsors_title: "Las instituciones que hacen posible M-ONT.",
+  abstracts_eyebrow: "Participá",
+  abstracts_title: "Enviá un resumen. Aplicá a una beca.",
+  abstracts_body:
+    "Estudiantes de posgrado y postdocs pueden aplicar a becas de viaje. Se alienta a investigadores de la región a enviar resúmenes — las contribuciones seleccionadas serán presentadas en la sesión de posters y, potencialmente, como charlas breves.",
+  abstracts_open: "El período de envío de resúmenes y solicitud de becas estará abierto del 15 de julio al 31 de agosto de 2027.",
+  abstracts_fellowship_btn: "Aplicar a beca",
+  abstracts_abstract_btn: "Enviar resumen",
 };
 
 export const HOME: Record<Lang, HomeContent> = { en, es };

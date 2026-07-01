@@ -3,6 +3,9 @@ import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 import BarsRibbon from "@/components/BarsRibbon";
 import CommitteeSection from "@/components/pages/CommitteeSection";
+import SpeakersSection from "@/components/pages/SpeakersSection";
+import SponsorsSection from "@/components/pages/SponsorsSection";
+import AbstractsSection from "@/components/pages/AbstractsSection";
 import { localizePath, type Lang } from "@/lib/i18n";
 import { HOME } from "@/data/content/home";
 import { asset } from "@/lib/asset";
@@ -209,8 +212,17 @@ export default function HomePage({ lang }: { lang: Lang }) {
         </div>
       </section>
 
+      {/* CONFIRMED SPEAKERS */}
+      <SpeakersSection lang={lang} />
+
       {/* ORGANIZING COMMITTEE */}
       <CommitteeSection lang={lang} />
+
+      {/* MAIN SPONSORS */}
+      <SponsorsSection lang={lang} />
+
+      {/* ABSTRACTS & FELLOWSHIPS */}
+      <AbstractsSection lang={lang} />
     </>
   );
 }

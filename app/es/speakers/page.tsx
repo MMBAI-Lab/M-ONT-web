@@ -1,5 +1,5 @@
-import SectionPage from "@/components/pages/SectionPage";
+import SpeakersPage from "@/components/pages/SpeakersPage";
 
 export default function Page() {
-  return <SectionPage lang="es" section="speakers" />;
+  return <SpeakersPage lang="es" />;
 }
