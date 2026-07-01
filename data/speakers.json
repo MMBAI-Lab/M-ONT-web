@@ -44,7 +44,7 @@
     "iso": "us",
     "talk_title": "Towards microRNA therapeutics in cancer",
     "talk_confirmed": true,
-    "photo": "FrankSlack_final.jpg",
+    "photo": "FrankSlack.jpg",
     "confirmed": true
   },
   {
@@ -56,7 +56,7 @@
     "iso": "us",
     "talk_title": "Less may be more: the evolving role of tRNA-derived small RNAs in biology and therapeutics",
     "talk_confirmed": true,
-    "photo": "SaumyaDas_final.jpg",
+    "photo": "SaumyaDas.jpg",
     "confirmed": true
   },
   {
@@ -116,7 +116,7 @@
     "iso": "ar",
     "talk_title": "Long non-coding RNAs and RNAi in field crops for sustainable agriculture",
     "talk_confirmed": false,
-    "photo": "FedericoAriel_final.jpg",
+    "photo": "FedericoAriel.jpg",
     "confirmed": true
   },
   {
@@ -140,7 +140,7 @@
     "iso": "es",
     "talk_title": "pH-driven dynamics and mechanisms of LNP-mediated siRNA delivery",
     "talk_confirmed": false,
-    "photo": "ModestoOrozco_final.jpg",
+    "photo": "ModestoOrozco.jpg",
     "confirmed": true
   },
   {
@@ -176,7 +176,7 @@
     "iso": "it",
     "talk_title": "Introduction to RNA splicing",
     "talk_confirmed": false,
-    "photo": "EmanueleBuratti_final.jpg",
+    "photo": "EmanueleBuratti.jpg",
     "confirmed": true
   }
 ]
