@@ -1,6 +1,8 @@
+import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 import sponsors from "@/data/sponsors.json";
 import { HOME } from "@/data/content/home";
+import { asset } from "@/lib/asset";
 import type { Lang } from "@/lib/i18n";
 
 export default function SponsorsSection({ lang }: { lang: Lang }) {
@@ -28,10 +30,17 @@ export default function SponsorsSection({ lang }: { lang: Lang }) {
                 rel="noreferrer"
                 className="flex min-w-[200px] flex-col items-center justify-center gap-2 rounded-xl border border-border bg-bg px-8 py-6 text-center transition hover:border-accent"
               >
-                {/* Logo placeholder — swap with <Image> once assets are provided */}
-                <span className="font-serif text-2xl font-bold text-accent">
-                  {s.short}
-                </span>
+                {s.logo ? (
+                  <Image
+                    src={asset(`/figures/${s.logo}`)}
+                    alt={s.name}
+                    width={200}
+                    height={60}
+                    className="h-12 w-auto object-contain"
+                  />
+                ) : (
+                  <span className="font-serif text-2xl font-bold text-accent">{s.short}</span>
+                )}
                 <span className="text-xs leading-relaxed text-muted">{s.name}</span>
               </a>
             </FadeIn>

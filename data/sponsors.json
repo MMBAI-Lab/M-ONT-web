@@ -4,13 +4,13 @@
       "name": "Oligonucleotide Therapeutics Society",
       "short": "OTS",
       "url": "https://www.oligotherapeutics.org",
-      "logo": null
+      "logo": "OTS_logo.webp"
     },
     {
       "name": "International Centre for Genetic Engineering and Biotechnology",
       "short": "ICGEB",
       "url": "https://www.icgeb.org",
-      "logo": null
+      "logo": "ICGEB_logo.png"
     }
   ],
   "other": [

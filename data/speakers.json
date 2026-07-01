@@ -8,7 +8,7 @@
     "iso": "us",
     "talk_title": "The making of Nusinersen and current frontiers in splice-switching ASOs",
     "talk_confirmed": false,
-    "photo": null,
+    "photo": "AdrianKrainer.webp",
     "confirmed": true
   },
   {
@@ -20,7 +20,7 @@
     "iso": "us",
     "talk_title": "CRISPR Therapeutics: ex vivo and in vivo",
     "talk_confirmed": false,
-    "photo": null,
+    "photo": "LauraSepp.webp",
     "confirmed": true
   },
   {
@@ -44,7 +44,7 @@
     "iso": "us",
     "talk_title": "Towards microRNA therapeutics in cancer",
     "talk_confirmed": true,
-    "photo": null,
+    "photo": "FrankSlack_final.jpg",
     "confirmed": true
   },
   {
@@ -56,7 +56,7 @@
     "iso": "us",
     "talk_title": "Less may be more: the evolving role of tRNA-derived small RNAs in biology and therapeutics",
     "talk_confirmed": true,
-    "photo": null,
+    "photo": "SaumyaDas_final.jpg",
     "confirmed": true
   },
   {
@@ -68,7 +68,7 @@
     "iso": "us",
     "talk_title": "Regulation of mRNA decay with ASOs for gene expression activation",
     "talk_confirmed": false,
-    "photo": null,
+    "photo": "IsabelAznarez.jpg",
     "confirmed": true
   },
   {
@@ -104,7 +104,7 @@
     "iso": "ar",
     "talk_title": "ASOs, transcription and chromatin structure",
     "talk_confirmed": false,
-    "photo": null,
+    "photo": "AlbertoKornblihtt.jpg",
     "confirmed": true
   },
   {
@@ -116,7 +116,7 @@
     "iso": "ar",
     "talk_title": "Long non-coding RNAs and RNAi in field crops for sustainable agriculture",
     "talk_confirmed": false,
-    "photo": null,
+    "photo": "FedericoAriel_final.jpg",
     "confirmed": true
   },
   {
@@ -140,7 +140,7 @@
     "iso": "es",
     "talk_title": "pH-driven dynamics and mechanisms of LNP-mediated siRNA delivery",
     "talk_confirmed": false,
-    "photo": null,
+    "photo": "ModestoOrozco_final.jpg",
     "confirmed": true
   },
   {
@@ -176,7 +176,7 @@
     "iso": "it",
     "talk_title": "Introduction to RNA splicing",
     "talk_confirmed": false,
-    "photo": null,
+    "photo": "EmanueleBuratti_final.jpg",
     "confirmed": true
   }
 ]
