@@ -1,5 +1,5 @@
 import FadeIn from "@/components/FadeIn";
-import PageBanner from "@/components/PageBanner";
+
 import type { Lang } from "@/lib/i18n";
 
 export default function RegistrationPage({ lang }: { lang: Lang }) {
@@ -7,7 +7,7 @@ export default function RegistrationPage({ lang }: { lang: Lang }) {
 
   return (
     <>
-      <PageBanner />
+      
       <div className="mx-auto max-w-4xl px-6 py-24 md:py-32">
         <FadeIn>
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">

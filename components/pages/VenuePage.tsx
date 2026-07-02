@@ -1,5 +1,6 @@
+import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
-import PageBanner from "@/components/PageBanner";
+import { asset } from "@/lib/asset";
 import type { Lang } from "@/lib/i18n";
 
 export default function VenuePage({ lang }: { lang: Lang }) {
@@ -7,7 +8,7 @@ export default function VenuePage({ lang }: { lang: Lang }) {
 
   return (
     <>
-      <PageBanner />
+      
       <div className="mx-auto max-w-4xl px-6 py-24 md:py-32 space-y-16">
 
         {/* Venue */}
@@ -18,7 +19,18 @@ export default function VenuePage({ lang }: { lang: Lang }) {
           <h1 className="mt-3 font-serif text-4xl font-semibold tracking-tight text-ink md:text-5xl">
             {isEs ? "Montevideo, Uruguay" : "Montevideo, Uruguay"}
           </h1>
-          <div className="mt-8 rounded-xl border border-border bg-surface p-8">
+          <div className="mt-8 overflow-hidden rounded-xl border border-border bg-surface">
+            <div className="relative h-64 w-full">
+              <Image
+                src={asset("/img/venue/ipmon.jpg")}
+                alt="Institut Pasteur de Montevideo"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 800px"
+                priority
+              />
+            </div>
+            <div className="p-8">
             <h2 className="font-serif text-xl font-semibold text-ink">
               Institut Pasteur de Montevideo
             </h2>
@@ -35,6 +47,7 @@ export default function VenuePage({ lang }: { lang: Lang }) {
             >
               www.pasteur.edu.uy →
             </a>
+            </div>
           </div>
         </FadeIn>
 
@@ -119,23 +132,34 @@ export default function VenuePage({ lang }: { lang: Lang }) {
           </p>
           <div className="mt-6 grid gap-4 md:grid-cols-2">
             {(isEs ? [
-              { title: "Rambla de Montevideo", desc: "22 km de paseo costero junto al Río de la Plata. Ideal para caminar, andar en bicicleta o simplemente disfrutar del atardecer." },
-              { title: "Ciudad Vieja", desc: "El casco histórico: Plaza Independencia, Palacio Salvo, Mercado del Puerto (para el asado imperdible) y la Plaza Matriz." },
-              { title: "Pocitos y Playa Ramírez", desc: "Playas urbanas con chiringuitos, deportes acuáticos y ambiente veraniego a pocos minutos del centro." },
-              { title: "Mercado Agrícola", desc: "Mercado renovado con oferta gastronómica variada, ideal para el almuerzo o la merienda." },
-              { title: "Colonia del Sacramento", desc: "Ciudad patrimonio UNESCO a 1 h en ferry desde Montevideo. Barrio histórico imperdible." },
-              { title: "Punta del Este", desc: "El famoso balneario uruguayo, a ~2 h en ómnibus. Playas, gastronomía y la icónica Mano en la Arena." },
+              { title: "Rambla de Montevideo", desc: "22 km de paseo costero junto al Río de la Plata. Ideal para caminar, andar en bicicleta o simplemente disfrutar del atardecer.", img: "rambla.jpg" },
+              { title: "Ciudad Vieja", desc: "El casco histórico: Plaza Independencia, Palacio Salvo, Mercado del Puerto (para el asado imperdible) y la Plaza Matriz.", img: "ciudad_vieja.jpg" },
+              { title: "Pocitos y Playa Ramírez", desc: "Playas urbanas con chiringuitos, deportes acuáticos y ambiente veraniego a pocos minutos del centro.", img: "pocitos.jpg" },
+              { title: "Mercado Agrícola", desc: "Mercado renovado con oferta gastronómica variada, ideal para el almuerzo o la merienda.", img: "mercado_agricola.jpg" },
+              { title: "Colonia del Sacramento", desc: "Ciudad patrimonio UNESCO a 1 h en ferry desde Montevideo. Barrio histórico imperdible.", img: "colonia.jpg" },
+              { title: "Punta del Este", desc: "El famoso balneario uruguayo, a ~2 h en ómnibus. Playas, gastronomía y la icónica Mano en la Arena.", img: "punta_del_este.jpg" },
             ] : [
-              { title: "Rambla de Montevideo", desc: "22 km coastal promenade along the Río de la Plata. Perfect for walking, cycling or watching the sunset." },
-              { title: "Ciudad Vieja (Old Town)", desc: "Historic quarter: Plaza Independencia, Palacio Salvo, Mercado del Puerto (for unmissable asado) and Plaza Matriz." },
-              { title: "Pocitos & Playa Ramírez", desc: "Urban beaches with beach bars, water sports and a summer atmosphere minutes from downtown." },
-              { title: "Mercado Agrícola", desc: "Renovated market hall with diverse food stalls — great for lunch or a snack." },
-              { title: "Colonia del Sacramento", desc: "UNESCO World Heritage city, 1 h by ferry from Montevideo. A historic gem." },
-              { title: "Punta del Este", desc: "Uruguay's famous beach resort, ~2 h by bus. Beaches, restaurants and the iconic Hand sculpture." },
+              { title: "Rambla de Montevideo", desc: "22 km coastal promenade along the Río de la Plata. Perfect for walking, cycling or watching the sunset.", img: "rambla.jpg" },
+              { title: "Ciudad Vieja (Old Town)", desc: "Historic quarter: Plaza Independencia, Palacio Salvo, Mercado del Puerto (for unmissable asado) and Plaza Matriz.", img: "ciudad_vieja.jpg" },
+              { title: "Pocitos & Playa Ramírez", desc: "Urban beaches with beach bars, water sports and a summer atmosphere minutes from downtown.", img: "pocitos.jpg" },
+              { title: "Mercado Agrícola", desc: "Renovated market hall with diverse food stalls — great for lunch or a snack.", img: "mercado_agricola.jpg" },
+              { title: "Colonia del Sacramento", desc: "UNESCO World Heritage city, 1 h by ferry from Montevideo. A historic gem.", img: "colonia.jpg" },
+              { title: "Punta del Este", desc: "Uruguay's famous beach resort, ~2 h by bus. Beaches, restaurants and the iconic Hand sculpture.", img: "punta_del_este.jpg" },
             ]).map((item) => (
-              <div key={item.title} className="rounded-xl border border-border bg-surface p-5 transition hover:border-accent">
-                <h3 className="font-serif font-semibold text-ink">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">{item.desc}</p>
+              <div key={item.title} className="overflow-hidden rounded-xl border border-border bg-surface transition hover:border-accent">
+                <div className="relative h-44 w-full">
+                  <Image
+                    src={asset(`/img/venue/${item.img}`)}
+                    alt={item.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 400px"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="font-serif font-semibold text-ink">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted">{item.desc}</p>
+                </div>
               </div>
             ))}
           </div>

@@ -1,5 +1,5 @@
 import FadeIn from "@/components/FadeIn";
-import PageBanner from "@/components/PageBanner";
+
 import SpeakerCard from "@/components/SpeakerCard";
 import { getConfirmedSpeakers } from "@/lib/speakers";
 import { HOME } from "@/data/content/home";
@@ -11,7 +11,7 @@ export default function SpeakersPage({ lang }: { lang: Lang }) {
 
   return (
     <>
-    <PageBanner />
+    
     <section className="mx-auto max-w-6xl px-6 py-24 md:py-32">
       <FadeIn>
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">
