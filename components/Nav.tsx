@@ -64,6 +64,13 @@ export default function Nav() {
           </Link>
           <div className="flex items-center gap-5 md:gap-7">
             <ul className="hidden items-center gap-6 text-sm font-medium text-muted md:flex">
+              <li>
+                <Link href={home} aria-label="Home" className="hover:text-ink">
+                  <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor" aria-hidden="true">
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7A1 1 0 003 11h1v6a1 1 0 001 1h4v-4h2v4h4a1 1 0 001-1v-6h1a1 1 0 00.707-1.707l-7-7z"/>
+                  </svg>
+                </Link>
+              </li>
               {SECTIONS.map((s) => (
                 <li key={s.path}>
                   <Link

@@ -1,28 +1,59 @@
 import FadeIn from "@/components/FadeIn";
+import PageBanner from "@/components/PageBanner";
 import { PROGRAMME } from "@/data/content/programme";
 import type { Lang } from "@/lib/i18n";
 
+// Colors from the BarsRibbon palette, cycling through for talks
+const TALK_COLORS = [
+  "#2E5DA6", "#3CB4C8", "#6FCFC4", "#A8D659",
+  "#F2D550", "#F09850", "#E5634A", "#D14C7B",
+];
+
 const TYPE_STYLES: Record<string, string> = {
-  talk: "bg-bg border-border",
-  tbc: "bg-elevated border-border border-dashed text-muted",
-  break: "bg-elevated/50 border-transparent text-subtle",
-  lunch: "bg-elevated/50 border-transparent text-subtle",
-  session: "bg-accent/5 border-accent/30",
+  talk: "bg-bg border-border/60",
+  tbc: "bg-elevated border-dashed border-border",
+  break: "bg-elevated/30 border-transparent",
+  lunch: "bg-elevated/30 border-transparent",
+  session: "bg-surface border-border/60",
 };
 
-const TYPE_DOT: Record<string, string> = {
-  talk: "bg-accent",
-  tbc: "bg-subtle",
-  break: "bg-transparent",
-  lunch: "bg-transparent",
-  session: "bg-accent/60",
-};
+function DaySlots({ slots, dayIndex }: { slots: { time: string; speaker: string | null; title: string | null; type: string }[]; dayIndex: number }) {
+  let colorIdx = dayIndex * 3; // offset per day so colors don't repeat the same start
+  return (
+    <div className="space-y-2">
+      {slots.map((slot, si) => {
+        const isColored = slot.type === "talk" || slot.type === "session";
+        const color = isColored ? TALK_COLORS[(colorIdx++) % TALK_COLORS.length] : null;
+        return (
+          <div key={si} className={`flex overflow-hidden rounded-lg border ${TYPE_STYLES[slot.type]}`}>
+            <div className="w-1 shrink-0" style={color ? { background: color } : {}} />
+            <div className="flex flex-1 gap-4 px-4 py-3">
+              <span className="w-28 shrink-0 pt-0.5 font-mono text-xs text-subtle">{slot.time}</span>
+              <div className="flex-1">
+                {slot.speaker && (
+                  <p className="text-sm font-semibold" style={color ? { color } : { color: "rgb(var(--ink))" }}>
+                    {slot.speaker}
+                  </p>
+                )}
+                <p className={`text-sm leading-snug ${slot.speaker ? "text-muted" : "font-medium text-ink"}`}>
+                  {slot.title}
+                </p>
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
 
 export default function ProgrammePage({ lang }: { lang: Lang }) {
   const days = PROGRAMME[lang];
   const isEs = lang === "es";
 
   return (
+    <>
+    <PageBanner />
     <div className="mx-auto max-w-4xl px-6 py-24 md:py-32">
       <FadeIn>
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">
@@ -54,37 +85,12 @@ export default function ProgrammePage({ lang }: { lang: Lang }) {
                 </h2>
                 <span className="text-sm font-medium text-subtle">{day.date}</span>
               </div>
-              <div className="space-y-2">
-                {day.slots.map((slot, si) => (
-                  <div
-                    key={si}
-                    className={`flex gap-4 rounded-lg border px-4 py-3 ${TYPE_STYLES[slot.type]}`}
-                  >
-                    <span className="w-28 shrink-0 pt-0.5 text-xs font-mono text-subtle">
-                      {slot.time}
-                    </span>
-                    <div className="flex flex-1 items-start gap-3">
-                      {(slot.type === "talk" || slot.type === "tbc" || slot.type === "session") && (
-                        <span className={`mt-1.5 h-2 w-2 shrink-0 rounded-full ${TYPE_DOT[slot.type]}`} />
-                      )}
-                      <div>
-                        {slot.speaker && (
-                          <p className="text-sm font-semibold text-ink">
-                            {slot.speaker}
-                          </p>
-                        )}
-                        <p className={`text-sm leading-snug ${slot.speaker ? "text-muted" : "font-medium text-ink"}`}>
-                          {slot.title}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <DaySlots slots={day.slots} dayIndex={di} />
             </div>
           </FadeIn>
         ))}
       </div>
     </div>
+    </>
   );
 }

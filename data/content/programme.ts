@@ -77,7 +77,8 @@ const en: DaySchedule[] = [
       { time: "09:50–10:40", speaker: "Muthiah Manoharan", title: "New frontiers and current challenges in siRNA design", type: "talk" },
       { time: "10:40–11:10", speaker: null, title: "Coffee break", type: "break" },
       { time: "11:10–12:00", speaker: "Laura Sepp-Lorenzino", title: "CRISPR therapeutics: ex vivo and in vivo", type: "talk" },
-      { time: "12:00–12:30", speaker: null, title: "Closing", type: "session" },
+      { time: "12:00–12:30", speaker: null, title: "Closing ceremony", type: "session" },
+      { time: "14:00 onwards", speaker: null, title: "Social activity — city tour & farewell lunch", type: "session" },
     ],
   },
 ];
@@ -146,7 +147,8 @@ const es: DaySchedule[] = [
       { time: "09:50–10:40", speaker: "Muthiah Manoharan", title: "Nuevas fronteras y desafíos actuales en el diseño de siRNA", type: "talk" },
       { time: "10:40–11:10", speaker: null, title: "Pausa café", type: "break" },
       { time: "11:10–12:00", speaker: "Laura Sepp-Lorenzino", title: "Terapéuticos CRISPR: ex vivo e in vivo", type: "talk" },
-      { time: "12:00–12:30", speaker: null, title: "Cierre", type: "session" },
+      { time: "12:00–12:30", speaker: null, title: "Ceremonia de cierre", type: "session" },
+      { time: "14:00 en adelante", speaker: null, title: "Actividad social — city tour y almuerzo de despedida", type: "session" },
     ],
   },
 ];

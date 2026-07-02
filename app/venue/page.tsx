@@ -1,5 +1,5 @@
-import SectionPage from "@/components/pages/SectionPage";
+import VenuePage from "@/components/pages/VenuePage";
 
 export default function Page() {
-  return <SectionPage lang="en" section="venue" />;
+  return <VenuePage lang="en" />;
 }
