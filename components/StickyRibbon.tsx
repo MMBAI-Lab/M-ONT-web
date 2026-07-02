@@ -1,12 +1,13 @@
 "use client";
+import { usePathname } from "next/navigation";
 import BarsRibbon from "@/components/BarsRibbon";
 
-/**
- * Thin color ribbon that sticks just below the sticky nav bar
- * and remains visible as the user scrolls on every page.
- * z-40 keeps it below the nav (z-50) but above page content.
- */
+const HOME_ROUTES = new Set(["/", "/es", "/es/"]);
+
 export default function StickyRibbon() {
+  const pathname = usePathname() ?? "/";
+  if (HOME_ROUTES.has(pathname)) return null;
+
   return (
     <div className="sticky top-[65px] z-40 h-10 overflow-hidden border-b border-border/40 bg-bg">
       <div
