@@ -169,19 +169,19 @@ export default function VenuePage({ lang }: { lang: Lang }) {
               { title: "Ciudad Vieja", desc: "El casco histórico: Plaza Independencia, Palacio Salvo, Mercado del Puerto (para el asado imperdible) y la Plaza Matriz.", img: "ciudad_vieja.jpg" },
               { title: "Pocitos y Playa Ramírez", desc: "Playas urbanas con chiringuitos, deportes acuáticos y ambiente veraniego a pocos minutos del centro.", img: "pocitos.jpg" },
               { title: "Mercado Agrícola", desc: "Mercado renovado con oferta gastronómica variada, ideal para el almuerzo o la merienda.", img: "mercado_agricola.jpg" },
-              { title: "Colonia del Sacramento", desc: "Ciudad patrimonio UNESCO a 1 h en ferry desde Montevideo. Barrio histórico imperdible.", img: "colonia.jpg" },
-              { title: "Punta del Este", desc: "El famoso balneario uruguayo, a ~2 h en ómnibus. Playas, gastronomía y la icónica Mano en la Arena.", img: "punta_del_este.jpg" },
               { title: "Estadio Centenario", desc: "Icónico estadio sede del Mundial de 1930 y Monumento Histórico Nacional. Un lugar de peregrinaje para los amantes del fútbol.", img: "estadio_centenario.jpg" },
               { title: "Parque Rodó y Las Canteras", desc: "El pulmón verde de Montevideo: jardines a orillas de la laguna, parque de diversiones y la pintoresca playa de Las Canteras.", img: "parque_rodo.jpg" },
+              { title: "Colonia del Sacramento", desc: "Ciudad patrimonio UNESCO a 1 h en ferry desde Montevideo. Barrio histórico imperdible.", img: "colonia.jpg" },
+              { title: "Punta del Este", desc: "El famoso balneario uruguayo, a ~2 h en ómnibus. Playas, gastronomía y la icónica Mano en la Arena.", img: "punta_del_este.jpg" },
             ] : [
               { title: "Rambla de Montevideo", desc: "22 km coastal promenade along the Río de la Plata. Perfect for walking, cycling or watching the sunset.", img: "rambla.jpg" },
               { title: "Ciudad Vieja (Old Town)", desc: "Historic quarter: Plaza Independencia, Palacio Salvo, Mercado del Puerto (for unmissable asado) and Plaza Matriz.", img: "ciudad_vieja.jpg" },
               { title: "Pocitos & Playa Ramírez", desc: "Urban beaches with beach bars, water sports and a summer atmosphere minutes from downtown.", img: "pocitos.jpg" },
               { title: "Mercado Agrícola", desc: "Renovated market hall with diverse food stalls — great for lunch or a snack.", img: "mercado_agricola.jpg" },
-              { title: "Colonia del Sacramento", desc: "UNESCO World Heritage city, 1 h by ferry from Montevideo. A historic gem.", img: "colonia.jpg" },
-              { title: "Punta del Este", desc: "Uruguay's famous beach resort, ~2 h by bus. Beaches, restaurants and the iconic Hand sculpture.", img: "punta_del_este.jpg" },
               { title: "Estadio Centenario", desc: "Iconic 1930 FIFA World Cup venue and UNESCO World Heritage monument. A pilgrimage site for football lovers.", img: "estadio_centenario.jpg" },
               { title: "Parque Rodó & Las Canteras", desc: "Montevideo's favourite green lung: lakeside gardens, an amusement park, and the rocky Las Canteras beach nearby.", img: "parque_rodo.jpg" },
+              { title: "Colonia del Sacramento", desc: "UNESCO World Heritage city, 1 h by ferry from Montevideo. A historic gem.", img: "colonia.jpg" },
+              { title: "Punta del Este", desc: "Uruguay's famous beach resort, ~2 h by bus. Beaches, restaurants and the iconic Hand sculpture.", img: "punta_del_este.jpg" },
             ]).map((item) => (
               <div key={item.title} className="overflow-hidden rounded-xl border border-border bg-surface transition hover:border-accent">
                 <div className="relative h-44 w-full">
