@@ -15,22 +15,10 @@
   ],
   "other": [
     {
-      "name": "Facultad de Ciencias, UdelaR",
-      "short": "FCIEN",
-      "url": "https://www.fcien.edu.uy",
-      "logo": "FCIEN_logo.png"
-    },
-    {
       "name": "Institut Pasteur de Montevideo",
       "short": "IPMon",
       "url": "https://www.pasteur.edu.uy",
       "logo": "IPMon_logo.png"
-    },
-    {
-      "name": "Club del ARN de Uruguay",
-      "short": "Club ARN-UY",
-      "url": null,
-      "logo": null
     }
   ]
 }

@@ -47,7 +47,7 @@ export default function SponsorsPage({ lang }: { lang: Lang }) {
 
         <FadeIn delay={0.08}>
           <h2 className="mt-14 mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-subtle">
-            {isEs ? "Sponsors principales" : "Main sponsors"}
+            {isEs ? "Sponsors principales y organizadores" : "Main sponsors and organizers"}
           </h2>
           <div className="grid gap-5 sm:grid-cols-2">
             {sponsors.main.map((s) => (
