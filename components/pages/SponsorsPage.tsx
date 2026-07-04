@@ -47,7 +47,7 @@ export default function SponsorsPage({ lang }: { lang: Lang }) {
 
         <FadeIn delay={0.08}>
           <h2 className="mt-14 mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-subtle">
-            {isEs ? "Sponsors principales y organizadores" : "Main sponsors and organizers"}
+            {isEs ? "Organizadores principales" : "Main organizers"}
           </h2>
           <div className="grid gap-5 sm:grid-cols-2">
             {sponsors.main.map((s) => (
@@ -61,6 +61,7 @@ export default function SponsorsPage({ lang }: { lang: Lang }) {
             <h2 className="mt-14 mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-subtle">
               {isEs ? "Otros sponsors" : "Other sponsors"}
             </h2>
+
             <div className="grid gap-4 sm:grid-cols-3">
               {(sponsors.other as Sponsor[]).map((s) => (
                 <SponsorCard key={s.short} s={s} />

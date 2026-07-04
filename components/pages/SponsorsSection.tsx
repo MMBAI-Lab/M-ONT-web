@@ -7,8 +7,14 @@ import type { Lang } from "@/lib/i18n";
 
 type Sponsor = { name: string; short: string; url: string | null; logo: string | null };
 
+const HOME_SPONSOR_SHORTS = ["OTS", "ICGEB", "UdelaR", "IPMon"];
+
 export default function SponsorsSection({ lang }: { lang: Lang }) {
   const c = HOME[lang];
+  const allSponsors = [...sponsors.main, ...(sponsors.other as Sponsor[])];
+  const homeSponsors = HOME_SPONSOR_SHORTS
+    .map((short) => allSponsors.find((s) => s.short === short))
+    .filter((s): s is Sponsor => s !== undefined);
 
   return (
     <section className="border-b border-border bg-surface">
@@ -22,9 +28,8 @@ export default function SponsorsSection({ lang }: { lang: Lang }) {
           </h2>
         </FadeIn>
 
-        {/* Main sponsors */}
         <div className="mt-10 flex flex-wrap justify-center gap-6">
-          {sponsors.main.map((s) => (
+          {homeSponsors.map((s) => (
             <FadeIn key={s.short}>
               <a
                 href={s.url ?? "#"}
@@ -48,30 +53,6 @@ export default function SponsorsSection({ lang }: { lang: Lang }) {
             </FadeIn>
           ))}
         </div>
-
-        {/* Other sponsors */}
-        {(sponsors.other as Sponsor[]).length > 0 && (
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
-            {(sponsors.other as Sponsor[]).map((s) => (
-              <FadeIn key={s.short}>
-                {s.url ? (
-                  <a
-                    href={s.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="rounded-lg border border-border bg-bg px-5 py-3 text-sm font-medium text-muted transition hover:border-accent hover:text-accent"
-                  >
-                    {s.name}
-                  </a>
-                ) : (
-                  <span className="rounded-lg border border-border bg-bg px-5 py-3 text-sm font-medium text-muted">
-                    {s.name}
-                  </span>
-                )}
-              </FadeIn>
-            ))}
-          </div>
-        )}
       </div>
     </section>
   );

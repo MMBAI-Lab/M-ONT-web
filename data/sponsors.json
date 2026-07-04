@@ -11,6 +11,20 @@
       "short": "ICGEB",
       "url": "https://www.icgeb.org",
       "logo": "ICGEB_logo_t.png"
+    }
+  ],
+  "other": [
+    {
+      "name": "Facultad de Ciencias, UdelaR",
+      "short": "FCIEN",
+      "url": "https://www.fcien.edu.uy",
+      "logo": "FCIEN_logo.png"
+    },
+    {
+      "name": "Institut Pasteur de Montevideo",
+      "short": "IPMon",
+      "url": "https://www.pasteur.edu.uy",
+      "logo": "IPMon_logo.png"
     },
     {
       "name": "Universidad de la República",
@@ -19,11 +33,10 @@
       "logo": "UdelaR_logo.png"
     },
     {
-      "name": "Institut Pasteur de Montevideo",
-      "short": "IPMon",
-      "url": "https://www.pasteur.edu.uy",
-      "logo": "IPMon_logo.png"
+      "name": "CENUR Litoral Norte, UdelaR",
+      "short": "CENUR",
+      "url": "https://www.litoralnorte.udelar.edu.uy",
+      "logo": "logo_cenur.svg"
     }
-  ],
-  "other": []
+  ]
 }
