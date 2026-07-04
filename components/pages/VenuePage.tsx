@@ -19,34 +19,67 @@ export default function VenuePage({ lang }: { lang: Lang }) {
           <h1 className="mt-3 font-serif text-4xl font-semibold tracking-tight text-ink md:text-5xl">
             {isEs ? "Montevideo, Uruguay" : "Montevideo, Uruguay"}
           </h1>
-          <div className="mt-8 overflow-hidden rounded-xl border border-border bg-surface">
-            <div className="relative h-64 w-full">
-              <Image
-                src={asset("/img/venue/ipmon.jpg")}
-                alt="Institut Pasteur de Montevideo"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 800px"
-                priority
-              />
+          <div className="mt-8 grid gap-5 md:grid-cols-2">
+            {/* IPMon */}
+            <div className="overflow-hidden rounded-xl border border-border bg-surface">
+              <div className="relative h-52 w-full">
+                <Image
+                  src={asset("/img/venue/ipmon.jpg")}
+                  alt="Institut Pasteur de Montevideo"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 400px"
+                  priority
+                />
+              </div>
+              <div className="p-6">
+                <h2 className="font-serif text-lg font-semibold text-ink">
+                  Institut Pasteur de Montevideo
+                </h2>
+                <p className="mt-3 text-sm text-muted">
+                  {isEs
+                    ? "Institución de referencia en ciencias biológicas en Uruguay, afiliada a la Universidad de la República. Sede principal del workshop."
+                    : "A leading biological sciences institution in Uruguay, affiliated with Universidad de la República. Main venue of the workshop."}
+                </p>
+                <a
+                  href="https://www.pasteur.edu.uy"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-4 inline-block text-sm font-medium text-accent hover:underline"
+                >
+                  www.pasteur.edu.uy →
+                </a>
+              </div>
             </div>
-            <div className="p-8">
-            <h2 className="font-serif text-xl font-semibold text-ink">
-              Institut Pasteur de Montevideo
-            </h2>
-            <p className="mt-3 text-sm text-muted">
-              {isEs
-                ? "El workshop se llevará a cabo en las instalaciones del Institut Pasteur de Montevideo (IPMon), institución de referencia en ciencias biológicas en Uruguay, afiliada a la Universidad de la República."
-                : "The workshop will be held at the Institut Pasteur de Montevideo (IPMon), a leading biological sciences institution in Uruguay, affiliated with Universidad de la República."}
-            </p>
-            <a
-              href="https://www.pasteur.edu.uy"
-              target="_blank"
-              rel="noreferrer"
-              className="mt-4 inline-block text-sm font-medium text-accent hover:underline"
-            >
-              www.pasteur.edu.uy →
-            </a>
+            {/* FCIEN */}
+            <div className="overflow-hidden rounded-xl border border-border bg-surface">
+              <div className="relative h-52 w-full">
+                <Image
+                  src={asset("/img/venue/fcien.jpg")}
+                  alt="Facultad de Ciencias, UdelaR"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 400px"
+                />
+              </div>
+              <div className="p-6">
+                <h2 className="font-serif text-lg font-semibold text-ink">
+                  Facultad de Ciencias — UdelaR
+                </h2>
+                <p className="mt-3 text-sm text-muted">
+                  {isEs
+                    ? "La Facultad de Ciencias de la Universidad de la República, ubicada a pocos minutos del IPMon, es co-sede del workshop y referente en investigación científica en Uruguay."
+                    : "The Faculty of Sciences of Universidad de la República, minutes from IPMon, is co-venue of the workshop and a leading research institution in Uruguay."}
+                </p>
+                <a
+                  href="https://www.fcien.edu.uy"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-4 inline-block text-sm font-medium text-accent hover:underline"
+                >
+                  www.fcien.edu.uy →
+                </a>
+              </div>
             </div>
           </div>
         </FadeIn>
@@ -138,6 +171,8 @@ export default function VenuePage({ lang }: { lang: Lang }) {
               { title: "Mercado Agrícola", desc: "Mercado renovado con oferta gastronómica variada, ideal para el almuerzo o la merienda.", img: "mercado_agricola.jpg" },
               { title: "Colonia del Sacramento", desc: "Ciudad patrimonio UNESCO a 1 h en ferry desde Montevideo. Barrio histórico imperdible.", img: "colonia.jpg" },
               { title: "Punta del Este", desc: "El famoso balneario uruguayo, a ~2 h en ómnibus. Playas, gastronomía y la icónica Mano en la Arena.", img: "punta_del_este.jpg" },
+              { title: "Estadio Centenario", desc: "Icónico estadio sede del Mundial de 1930 y Monumento Histórico Nacional. Un lugar de peregrinaje para los amantes del fútbol.", img: "estadio_centenario.jpg" },
+              { title: "Parque Rodó y Las Canteras", desc: "El pulmón verde de Montevideo: jardines a orillas de la laguna, parque de diversiones y la pintoresca playa de Las Canteras.", img: "parque_rodo.jpg" },
             ] : [
               { title: "Rambla de Montevideo", desc: "22 km coastal promenade along the Río de la Plata. Perfect for walking, cycling or watching the sunset.", img: "rambla.jpg" },
               { title: "Ciudad Vieja (Old Town)", desc: "Historic quarter: Plaza Independencia, Palacio Salvo, Mercado del Puerto (for unmissable asado) and Plaza Matriz.", img: "ciudad_vieja.jpg" },
@@ -145,6 +180,8 @@ export default function VenuePage({ lang }: { lang: Lang }) {
               { title: "Mercado Agrícola", desc: "Renovated market hall with diverse food stalls — great for lunch or a snack.", img: "mercado_agricola.jpg" },
               { title: "Colonia del Sacramento", desc: "UNESCO World Heritage city, 1 h by ferry from Montevideo. A historic gem.", img: "colonia.jpg" },
               { title: "Punta del Este", desc: "Uruguay's famous beach resort, ~2 h by bus. Beaches, restaurants and the iconic Hand sculpture.", img: "punta_del_este.jpg" },
+              { title: "Estadio Centenario", desc: "Iconic 1930 FIFA World Cup venue and UNESCO World Heritage monument. A pilgrimage site for football lovers.", img: "estadio_centenario.jpg" },
+              { title: "Parque Rodó & Las Canteras", desc: "Montevideo's favourite green lung: lakeside gardens, an amusement park, and the rocky Las Canteras beach nearby.", img: "parque_rodo.jpg" },
             ]).map((item) => (
               <div key={item.title} className="overflow-hidden rounded-xl border border-border bg-surface transition hover:border-accent">
                 <div className="relative h-44 w-full">

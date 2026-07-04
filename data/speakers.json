@@ -178,5 +178,53 @@
     "talk_confirmed": false,
     "photo": "EmanueleBuratti.jpg",
     "confirmed": true
+  },
+  {
+    "first": "Rodrigo",
+    "last": "Galindo-Murillo",
+    "name": "Rodrigo Galindo-Murillo",
+    "institution": "IONIS Pharmaceuticals",
+    "country": "USA",
+    "iso": "us",
+    "talk_title": null,
+    "talk_confirmed": false,
+    "photo": "RodrigoGalindoMurillo.jpg",
+    "confirmed": true
+  },
+  {
+    "first": "Pablo D.",
+    "last": "Dans",
+    "name": "Pablo D. Dans",
+    "institution": "Institut Pasteur de Montevideo / UdelaR",
+    "country": "Uruguay",
+    "iso": "uy",
+    "talk_title": "In-silico modelling of oligonucleotides",
+    "talk_confirmed": true,
+    "photo": "PabloDans.jpg",
+    "confirmed": true
+  },
+  {
+    "first": "Juan Pablo",
+    "last": "Tosar",
+    "name": "Juan Pablo Tosar",
+    "institution": "Institut Pasteur de Montevideo / UdelaR",
+    "country": "Uruguay",
+    "iso": "uy",
+    "talk_title": "Gymnosis, endosomal sensing and escape",
+    "talk_confirmed": true,
+    "photo": "JuanPabloTosar.webp",
+    "confirmed": true
+  },
+  {
+    "first": "Victoria",
+    "last": "Calzada",
+    "name": "Victoria Calzada",
+    "institution": "Universidad de la República",
+    "country": "Uruguay",
+    "iso": "uy",
+    "talk_title": "Therapeutic aptamers",
+    "talk_confirmed": true,
+    "photo": "VictoriaCalzada.jpg",
+    "confirmed": true
   }
 ]
