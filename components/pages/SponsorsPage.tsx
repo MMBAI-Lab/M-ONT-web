@@ -56,16 +56,18 @@ export default function SponsorsPage({ lang }: { lang: Lang }) {
           </div>
         </FadeIn>
 
-        <FadeIn delay={0.14}>
-          <h2 className="mt-14 mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-subtle">
-            {isEs ? "Otros sponsors" : "Other sponsors"}
-          </h2>
-          <div className="grid gap-4 sm:grid-cols-3">
-            {sponsors.other.map((s) => (
-              <SponsorCard key={s.short} s={s} />
-            ))}
-          </div>
-        </FadeIn>
+        {sponsors.other.length > 0 && (
+          <FadeIn delay={0.14}>
+            <h2 className="mt-14 mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-subtle">
+              {isEs ? "Otros sponsors" : "Other sponsors"}
+            </h2>
+            <div className="grid gap-4 sm:grid-cols-3">
+              {sponsors.other.map((s) => (
+                <SponsorCard key={s.short} s={s} />
+              ))}
+            </div>
+          </FadeIn>
+        )}
 
         <FadeIn delay={0.2}>
           <div className="mt-16 rounded-xl border border-dashed border-border bg-surface p-8">

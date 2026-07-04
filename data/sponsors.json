@@ -11,14 +11,19 @@
       "short": "ICGEB",
       "url": "https://www.icgeb.org",
       "logo": "ICGEB_logo_t.png"
-    }
-  ],
-  "other": [
+    },
+    {
+      "name": "Universidad de la República",
+      "short": "UdelaR",
+      "url": "https://www.udelar.edu.uy",
+      "logo": "UdelaR_logo.png"
+    },
     {
       "name": "Institut Pasteur de Montevideo",
       "short": "IPMon",
       "url": "https://www.pasteur.edu.uy",
       "logo": "IPMon_logo.png"
     }
-  ]
+  ],
+  "other": []
 }
