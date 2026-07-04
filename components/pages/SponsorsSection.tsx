@@ -5,6 +5,8 @@ import { HOME } from "@/data/content/home";
 import { asset } from "@/lib/asset";
 import type { Lang } from "@/lib/i18n";
 
+type Sponsor = { name: string; short: string; url: string | null; logo: string | null };
+
 export default function SponsorsSection({ lang }: { lang: Lang }) {
   const c = HOME[lang];
 
@@ -48,9 +50,9 @@ export default function SponsorsSection({ lang }: { lang: Lang }) {
         </div>
 
         {/* Other sponsors */}
-        {sponsors.other.length > 0 && (
+        {(sponsors.other as Sponsor[]).length > 0 && (
           <div className="mt-10 flex flex-wrap justify-center gap-4">
-            {sponsors.other.map((s) => (
+            {(sponsors.other as Sponsor[]).map((s) => (
               <FadeIn key={s.short}>
                 {s.url ? (
                   <a
