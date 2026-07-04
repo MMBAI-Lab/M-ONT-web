@@ -7,7 +7,8 @@ import { localizePath, type Lang } from "@/lib/i18n";
 
 export default function SpeakersSection({ lang }: { lang: Lang }) {
   const c = HOME[lang];
-  const speakers = getConfirmedSpeakers();
+  const ORGANIZERS = new Set(["Pablo D. Dans", "Juan Pablo Tosar", "Victoria Calzada"]);
+  const speakers = getConfirmedSpeakers().filter((s) => !ORGANIZERS.has(s.name));
 
   return (
     <section className="border-b border-border bg-bg">
