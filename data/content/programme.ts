@@ -50,7 +50,7 @@ const en: DaySchedule[] = [
       { time: "15:10–15:30", speaker: null, title: "Coffee break", type: "break" },
       { time: "15:30–16:20", speaker: "Zoya Ignatova", title: "Expanding the functional landscape of tRNAs beyond translation into therapeutics", type: "talk" },
       { time: "16:20–18:00", speaker: null, title: "Poster session", type: "session" },
-      { time: "20:00 onwards", speaker: null, title: "Asado & barbecue", type: "session" },
+      { time: "20:00 onwards", speaker: null, title: "Asado — Barbecue", type: "session" },
     ],
   },
   {
@@ -120,7 +120,7 @@ const es: DaySchedule[] = [
       { time: "15:10–15:30", speaker: null, title: "Pausa café", type: "break" },
       { time: "15:30–16:20", speaker: "Zoya Ignatova", title: "Expandiendo el paisaje funcional de los ARNt más allá de la traducción", type: "talk" },
       { time: "16:20–18:00", speaker: null, title: "Sesión de posters", type: "session" },
-      { time: "20:00 en adelante", speaker: null, title: "Asado", type: "session" },
+      { time: "20:00 en adelante", speaker: null, title: "Asado — Barbecue", type: "session" },
     ],
   },
   {
