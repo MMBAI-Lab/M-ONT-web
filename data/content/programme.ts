@@ -16,12 +16,12 @@ export type DaySchedule = {
 const en: DaySchedule[] = [
   {
     day: "Monday",
-    date: "23 Feb",
+    date: "22 Feb",
     slots: [{ time: "All day", speaker: null, title: "Arrival & registration", type: "session" }],
   },
   {
     day: "Tuesday",
-    date: "24 Feb",
+    date: "23 Feb",
     slots: [
       { time: "09:00–09:50", speaker: "Laura Sepp-Lorenzino", title: "Welcome from OTS and introduction to oligonucleotide therapeutics", type: "talk" },
       { time: "09:50–10:40", speaker: "Emanuele Buratti", title: "Introduction to RNA splicing", type: "talk" },
@@ -38,7 +38,7 @@ const en: DaySchedule[] = [
   },
   {
     day: "Wednesday",
-    date: "25 Feb",
+    date: "24 Feb",
     slots: [
       { time: "09:00–09:50", speaker: "Manuel de la Mata", title: "miRNAs and their degradation mechanisms", type: "talk" },
       { time: "09:50–10:40", speaker: "Federico Ariel", title: "Long non-coding RNAs and RNAi in field crops for sustainable agriculture", type: "talk" },
@@ -55,7 +55,7 @@ const en: DaySchedule[] = [
   },
   {
     day: "Thursday",
-    date: "26 Feb",
+    date: "25 Feb",
     slots: [
       { time: "09:00–09:50", speaker: "Juan Pablo Tosar", title: "Naked RNA uptake, sensing, and endosomal escape", type: "talk" },
       { time: "09:50–10:40", speaker: "Saumya Das", title: "Less may be more: the evolving role of tRNA-derived small RNAs in biology and therapeutics", type: "talk" },
@@ -72,7 +72,7 @@ const en: DaySchedule[] = [
   },
   {
     day: "Friday",
-    date: "27 Feb",
+    date: "26 Feb",
     slots: [
       { time: "09:00–09:50", speaker: null, title: "Invited talk to be confirmed", type: "tbc" },
       { time: "09:50–10:40", speaker: "Muthiah Manoharan", title: "New frontiers and current challenges in siRNA design", type: "talk" },
@@ -86,12 +86,12 @@ const en: DaySchedule[] = [
 const es: DaySchedule[] = [
   {
     day: "Lunes",
-    date: "23 feb",
+    date: "22 feb",
     slots: [{ time: "Todo el día", speaker: null, title: "Llegada y registro", type: "session" }],
   },
   {
     day: "Martes",
-    date: "24 feb",
+    date: "23 feb",
     slots: [
       { time: "09:00–09:50", speaker: "Laura Sepp-Lorenzino", title: "Bienvenida de OTS e introducción a la terapéutica con oligonucleótidos", type: "talk" },
       { time: "09:50–10:40", speaker: "Emanuele Buratti", title: "Introducción al splicing de ARN", type: "talk" },
@@ -108,7 +108,7 @@ const es: DaySchedule[] = [
   },
   {
     day: "Miércoles",
-    date: "25 feb",
+    date: "24 feb",
     slots: [
       { time: "09:00–09:50", speaker: "Manuel de la Mata", title: "miRNAs y sus mecanismos de degradación", type: "talk" },
       { time: "09:50–10:40", speaker: "Federico Ariel", title: "ARN largos no codificantes y RNAi en cultivos para agricultura sostenible", type: "talk" },
@@ -125,7 +125,7 @@ const es: DaySchedule[] = [
   },
   {
     day: "Jueves",
-    date: "26 feb",
+    date: "25 feb",
     slots: [
       { time: "09:00–09:50", speaker: "Juan Pablo Tosar", title: "Captación de ARN desnudo, sensing y escape endosomal", type: "talk" },
       { time: "09:50–10:40", speaker: "Saumya Das", title: "Menos puede ser más: el rol de los ARN pequeños derivados de ARNt en biología y terapéutica", type: "talk" },
@@ -142,7 +142,7 @@ const es: DaySchedule[] = [
   },
   {
     day: "Viernes",
-    date: "27 feb",
+    date: "26 feb",
     slots: [
       { time: "09:00–09:50", speaker: null, title: "Charla invitada por confirmar", type: "tbc" },
       { time: "09:50–10:40", speaker: "Muthiah Manoharan", title: "Nuevas fronteras y desafíos actuales en el diseño de siRNA", type: "talk" },

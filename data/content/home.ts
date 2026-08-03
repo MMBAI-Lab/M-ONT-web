@@ -35,12 +35,12 @@ export type HomeContent = {
 };
 
 const en: HomeContent = {
-  eyebrow: "Montevideo · 23–27 February 2027 · International Workshop",
+  eyebrow: "Montevideo · 23–26 February 2027 · International Workshop",
   title_pre: "The chemistry, biology, and clinical use of ",
   title_accent: "oligonucleotide and RNA therapeutics",
   title_post: ".",
   intro:
-    "M-ONT is a four-day international workshop in Montevideo, Uruguay (23–27 February 2027) — bringing together leading scientists, clinicians, and industry voices to teach the design, mechanism, and clinical translation of antisense oligonucleotides, siRNAs, aptamers, splice-switching ASOs, and emerging RNA therapeutics.",
+    "M-ONT is a four-day international workshop in Montevideo, Uruguay (23–26 February 2027) — bringing together leading scientists, clinicians, and industry voices to teach the design, mechanism, and clinical translation of antisense oligonucleotides, siRNAs, aptamers, splice-switching ASOs, and emerging RNA therapeutics.",
   cta_register: "Registration",
   cta_programme: "See programme",
   about_eyebrow: "About M-ONT",
@@ -57,7 +57,7 @@ const en: HomeContent = {
   facts_eyebrow: "At a glance",
   facts_title: "What to expect.",
   facts: [
-    { label: "When", value: "23–27 February 2027" },
+    { label: "When", value: "23–26 February 2027" },
     { label: "Format", value: "Lectures, research talks, posters" },
     { label: "Audience", value: "Graduate students, postdocs, clinicians, industry" },
     { label: "Language", value: "English" },
@@ -89,12 +89,12 @@ const en: HomeContent = {
 };
 
 const es: HomeContent = {
-  eyebrow: "Montevideo · 23–27 de febrero de 2027 · Workshop internacional",
+  eyebrow: "Montevideo · 23–26 de febrero de 2027 · Workshop internacional",
   title_pre: "La química, la biología y el uso clínico de ",
   title_accent: "oligonucleótidos y ARN terapéuticos",
   title_post: ".",
   intro:
-    "M-ONT es un workshop internacional de cuatro días en Montevideo, Uruguay (23–27 de febrero de 2027) — reúne a científicos, clínicos y referentes de la industria para enseñar el diseño, los mecanismos y la traslación clínica de oligonucleótidos antisentido, siRNAs, aptámeros, ASOs splice-switching y otras terapias basadas en ARN.",
+    "M-ONT es un workshop internacional de cuatro días en Montevideo, Uruguay (23–26 de febrero de 2027) — reúne a científicos, clínicos y referentes de la industria para enseñar el diseño, los mecanismos y la traslación clínica de oligonucleótidos antisentido, siRNAs, aptámeros, ASOs splice-switching y otras terapias basadas en ARN.",
   cta_register: "Registro",
   cta_programme: "Ver programa",
   about_eyebrow: "Sobre M-ONT",
@@ -111,7 +111,7 @@ const es: HomeContent = {
   facts_eyebrow: "En pocas líneas",
   facts_title: "Qué esperar.",
   facts: [
-    { label: "Cuándo", value: "23–27 de febrero de 2027" },
+    { label: "Cuándo", value: "23–26 de febrero de 2027" },
     { label: "Formato", value: "Clases, charlas de investigación, posters" },
     { label: "Público", value: "Estudiantes de posgrado, postdocs, clínicos, industria" },
     { label: "Idioma", value: "Inglés" },

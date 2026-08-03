@@ -1,6 +1,6 @@
 # M-ONT — Montevideo Workshop in OligoNucleotide and RNA Therapeutics
 
-Static, bilingual website for **M-ONT**, an international workshop on the chemistry, biology, delivery, and clinical translation of oligonucleotide and RNA therapeutics taking place in **Montevideo, Uruguay, 23–27 February 2027**.
+Static, bilingual website for **M-ONT**, an international workshop on the chemistry, biology, delivery, and clinical translation of oligonucleotide and RNA therapeutics taking place in **Montevideo, Uruguay, 23–26 February 2027** (arrival and registration Monday 22).
 
 Organized by [DansLab (MMBAI)](https://www.danslab.xyz) at Universidad de la República, Uruguay.
 
@@ -39,7 +39,7 @@ The site is served from the custom domain **https://www.m-ont.org/** — see [`p
 
 ```
 /                       Home — hero, about, at-a-glance, speakers, committee, sponsors, abstracts
-/programme/             Day-by-day schedule grid, Mon 23 – Fri 27 Feb
+/programme/             Day-by-day schedule grid, Mon 22 (arrival) – Fri 26 Feb
 /speakers/              19 confirmed speakers with photo, affiliation, flag, talk title
 /venue/                 Facultad de Ciencias venue, travel, Montevideo & Uruguay tourism
 /registration/          How to apply, fees, deadlines, fellowships
