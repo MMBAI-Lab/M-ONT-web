@@ -1,10 +1,10 @@
 # M-ONT — Montevideo Workshop in OligoNucleotide and RNA Therapeutics
 
-Static, bilingual website for **M-ONT**, an international workshop on the chemistry, biology, delivery, and clinical translation of oligonucleotide and RNA therapeutics taking place in **Montevideo, Uruguay, 23–26 February 2027**.
+Static, bilingual website for **M-ONT**, an international workshop on the chemistry, biology, delivery, and clinical translation of oligonucleotide and RNA therapeutics taking place in **Montevideo, Uruguay, 23–27 February 2027**.
 
 Organized by [DansLab (MMBAI)](https://www.danslab.xyz) at Universidad de la República, Uruguay.
 
-> The site is **under active development**. The programme, speaker line-up, venue, and registration details are still being finalized; the corresponding pages currently show placeholder copy.
+> The site is **live** at [www.m-ont.org](https://www.m-ont.org/) and every section has real content: the full five-day programme, 19 confirmed speakers, the organizing committee, venue and travel info, registration, and sponsors. A few slots in the programme are still marked *to be confirmed*, and the abstract/fellowship submission links are not wired up yet.
 
 ## Tech stack
 
@@ -38,12 +38,12 @@ The site is served from the custom domain **https://www.m-ont.org/** — see [`p
 ## Site map
 
 ```
-/                       Home — hero with skyline + logo, about, at-a-glance facts
-/programme/             Lectures, research talks, posters (placeholder)
-/speakers/              International faculty (placeholder)
-/venue/                 Montevideo venue & travel (placeholder)
-/registration/          How to apply, fees, deadlines (placeholder)
-/sponsors/              Sponsoring partners (placeholder)
+/                       Home — hero, about, at-a-glance, speakers, committee, sponsors, abstracts
+/programme/             Day-by-day schedule grid, Mon 23 – Fri 27 Feb
+/speakers/              19 confirmed speakers with photo, affiliation, flag, talk title
+/venue/                 Facultad de Ciencias venue, travel, Montevideo & Uruguay tourism
+/registration/          How to apply, fees, deadlines, fellowships
+/sponsors/              Main organizers (OTS, ICGEB) and other sponsors
 /contact/               Organizing committee
 /es/...                 Spanish mirror of every route above
 ```
@@ -64,7 +64,10 @@ Most copy edits don't need React.
 | ----------------------------- | -------------------------------------------------------- |
 | Nav, footer, language switch  | [data/content/common.ts](data/content/common.ts)         |
 | Home page copy                | [data/content/home.ts](data/content/home.ts)             |
-| Inner section placeholder copy| [data/content/sections.ts](data/content/sections.ts)    |
+| Programme schedule grid       | [data/content/programme.ts](data/content/programme.ts) — one `DaySchedule` per day, EN + ES |
+| Speakers                      | [data/speakers.json](data/speakers.json) — photo goes in `public/img/` |
+| Organizing committee          | [data/committee.json](data/committee.json)               |
+| Sponsors                      | [data/sponsors.json](data/sponsors.json) — logo goes in `public/figures/` |
 | Conference logo (full)        | [public/figures/MONT_logo.png](public/figures/MONT_logo.png) — used in the hero |
 | Conference logo (no text)     | [public/figures/MONT_mark.png](public/figures/MONT_mark.png) — used in the nav |
 | Skyline backdrop              | [public/figures/Mdeo_skyline.jpg](public/figures/Mdeo_skyline.jpg) plus the mirror-tiled `Mdeo_skyline_tile.jpg` |
@@ -89,19 +92,36 @@ components/
   LangSwitch.tsx                      Language switcher
   FadeIn.tsx                          framer-motion scroll-in wrapper
   BarsRibbon.tsx                      Slow-scrolling chromatogram ribbon (deterministic, looped)
-  pages/HomePage.tsx                  The home page (hero + about + at-a-glance)
-  pages/SectionPage.tsx               Generic placeholder for the six inner sections
+  StickyRibbon.tsx                    Ribbon pinned below the nav (hidden on home)
+  PageBanner.tsx                      Eyebrow + title header for inner pages
+  SpeakerCard.tsx, CommitteeCard.tsx  Portrait cards with country flag
+  pages/HomePage.tsx                  Hero, about, at-a-glance, plus the *Section blocks below
+  pages/SpeakersSection.tsx,          Home-page blocks, reused standalone on their own routes
+    CommitteeSection.tsx,
+    SponsorsSection.tsx,
+    AbstractsSection.tsx
+  pages/ProgrammePage.tsx,            One bespoke component per inner route
+    SpeakersPage.tsx, VenuePage.tsx,
+    RegistrationPage.tsx,
+    SponsorsPage.tsx, ContactPage.tsx
 
-data/content/
-  common.ts, home.ts, sections.ts     Typed { en, es } content dicts
+data/
+  content/common.ts, home.ts,         Typed { en, es } content dicts
+    programme.ts
+  speakers.json, committee.json,      Structured data, language-neutral
+    sponsors.json
 
 lib/
   i18n.ts                             Lang type, detectLang(), localizePath()
   asset.ts                            Prepend basePath to public/* URLs
+  speakers.ts, committee.ts           Load + sort the JSON data
+  links.ts                            External URLs shared by home + /registration/
 
 public/
   figures/                            Logos and skyline backdrops
+  img/                                Speaker portraits; img/venue/ for venue & tourism photos
   .nojekyll                           Disables Jekyll on GitHub Pages
+  CNAME                               Custom domain (www.m-ont.org)
 ```
 
 ## Image credits

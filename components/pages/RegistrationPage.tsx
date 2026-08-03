@@ -1,6 +1,7 @@
 import FadeIn from "@/components/FadeIn";
 
 import type { Lang } from "@/lib/i18n";
+import { ICGEB_FELLOWSHIP_URL, REGISTRATION_FORM_URL } from "@/lib/links";
 
 export default function RegistrationPage({ lang }: { lang: Lang }) {
   const isEs = lang === "es";
@@ -18,29 +19,30 @@ export default function RegistrationPage({ lang }: { lang: Lang }) {
           </h1>
         </FadeIn>
 
-        {/* Abstract submissions */}
+        {/* Registration & abstract submission */}
         <FadeIn delay={0.08}>
           <div className="mt-12 rounded-xl border border-border bg-surface p-8">
             <h2 className="font-serif text-2xl font-semibold text-ink">
-              {isEs ? "Envío de resúmenes" : "Abstract submissions"}
+              {isEs ? "Registro y envío de resúmenes" : "Registration & abstract submission"}
             </h2>
             <p className="mt-4 leading-relaxed text-muted">
               {isEs
-                ? "Investigadores y estudiantes de posgrado están invitados a enviar resúmenes de sus trabajos. Los resúmenes aceptados serán presentados en la sesión de posters. Algunos podrán ser seleccionados para una charla breve en el programa."
-                : "Researchers and graduate students are invited to submit abstracts. Accepted submissions will be presented in the poster session. A number of contributions may be selected for a short talk within the programme."}
+                ? "Todos los participantes deben registrarse y están invitados a enviar resúmenes. Los resúmenes seleccionados serán presentados en la sesión de posters. Un pequeño número de contribuciones podrá ser seleccionado para una charla breve en el programa. La fecha límite es el 30 de septiembre de 2026, 23:59 hora de Montevideo (UTC-3)."
+                : "All participants must register and are invited to submit abstracts. Selected submissions will be presented in the poster session. A small number of contributions may be selected for a short talk within the programme. The deadline is September 30, 2026, 23:59 Montevideo time (UTC-3)."}
             </p>
             <div className="mt-6 rounded-lg border border-accent/30 bg-accent/5 px-5 py-4 text-sm font-medium text-accent">
               {isEs
-                ? "📅 Período de envío: 15 de julio – 31 de agosto de 2027"
-                : "📅 Submission window: 15 July – 31 August 2027"}
+                ? "📅 Período de envío: 3 de agosto – 30 de septiembre de 2026"
+                : "📅 Submission window: Aug 3 – Sept 30, 2026"}
             </div>
-            <button
-              disabled
-              className="mt-6 cursor-not-allowed rounded-md border border-border bg-elevated px-5 py-3 text-sm font-medium text-subtle"
-              title={isEs ? "Abre el 15 de julio de 2027" : "Opens 15 July 2027"}
+            <a
+              href={REGISTRATION_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-block rounded-md bg-accent px-5 py-3 text-sm font-medium text-white transition hover:bg-accent-hover"
             >
-              {isEs ? "Enviar resumen (abre en julio)" : "Submit abstract (opens July)"}
-            </button>
+              {isEs ? "Formulario de registro (abierto)" : "Registration form (open)"}
+            </a>
           </div>
         </FadeIn>
 
@@ -48,41 +50,29 @@ export default function RegistrationPage({ lang }: { lang: Lang }) {
         <FadeIn delay={0.14}>
           <div className="mt-6 rounded-xl border border-border bg-surface p-8">
             <h2 className="font-serif text-2xl font-semibold text-ink">
-              {isEs ? "Becas para estudiantes" : "Student fellowships"}
+              {isEs
+                ? "Becas para investigadores en etapa inicial de carrera (ECR) seleccionados"
+                : "Fellowships for selected early career researchers (ECR)"}
             </h2>
             <p className="mt-4 leading-relaxed text-muted">
               {isEs
-                ? "M-ONT ofrecerá un número limitado de becas de viaje y/o estadía dirigidas a estudiantes de doctorado y postdocs de la región. Las condiciones y el formulario de solicitud se publicarán próximamente."
-                : "M-ONT will offer a limited number of travel and/or accommodation fellowships for PhD students and postdocs from the region. Conditions and application form will be announced soon."}
+                ? "Los ECR pueden solicitar una beca que cubre comidas y alojamiento. En algunos casos, el traslado podría cubrirse en parte o en su totalidad. Por favor seguí las pautas del ICGEB para solicitar una beca. Tené en cuenta que igualmente debés completar el formulario de registro que figura más arriba. La fecha límite es el 30 de septiembre de 2026."
+                : "ECR can apply for a Fellowship, covering meals and accommodation. In some cases, transportation might be covered (in part or in full). Please follow ICGEB’s guidelines to apply for a fellowship. Note that you still need to complete the registration form above. The deadline is September 30, 2026."}
             </p>
-            <p className="mt-4 text-sm font-medium text-subtle">
-              {isEs ? "🔜 Condiciones próximamente." : "🔜 Conditions coming soon."}
-            </p>
-            <button
-              disabled
-              className="mt-6 cursor-not-allowed rounded-md border border-border bg-elevated px-5 py-3 text-sm font-medium text-subtle"
-              title={isEs ? "Abre el 15 de julio de 2027" : "Opens 15 July 2027"}
+            <a
+              href={ICGEB_FELLOWSHIP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-block rounded-md border border-border bg-bg/70 px-5 py-3 text-sm font-medium text-ink transition hover:border-accent hover:text-accent"
             >
-              {isEs ? "Solicitar beca (abre en julio)" : "Apply for fellowship (opens July)"}
-            </button>
-          </div>
-        </FadeIn>
-
-        {/* General info */}
-        <FadeIn delay={0.2}>
-          <div className="mt-6 rounded-xl border border-border bg-surface p-8">
-            <h2 className="font-serif text-2xl font-semibold text-ink">
-              {isEs ? "Participantes externos" : "External participants"}
-            </h2>
-            <p className="mt-4 leading-relaxed text-muted">
               {isEs
-                ? "Los investigadores y estudiantes que no reciban beca son igualmente bienvenidos a participar. Deberán gestionar su propio traslado y hospedaje en Montevideo."
-                : "Researchers and students who do not receive a fellowship are equally welcome to attend. They are responsible for arranging their own travel and accommodation in Montevideo."}
-            </p>
+                ? "Aplicar acá (serás redirigido al sitio del ICGEB)"
+                : "Apply here (you will be redirected to ICGEB’s site)"}
+            </a>
           </div>
         </FadeIn>
 
-        <FadeIn delay={0.26}>
+        <FadeIn delay={0.2}>
           <p className="mt-8 text-sm text-subtle">
             {isEs
               ? "Para consultas sobre el proceso de registro escribí a "

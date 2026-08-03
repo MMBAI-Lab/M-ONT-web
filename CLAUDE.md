@@ -45,8 +45,10 @@ To add a new section: create both wrappers (EN and ES), the shared component in 
 
 Page text is **not** inline.
 
-- **Page-level copy** (eyebrows, headings, intro paragraphs, section titles) lives in `data/content/*.ts`, each exporting `{ en, es }` keyed by `Lang`. Files: `common.ts`, `home.ts`, `sections.ts`.
-- The six inner pages (programme, speakers, venue, registration, sponsors, contact) currently share a single generic component: `components/pages/SectionPage.tsx`, which takes a `section` key and reads from `SECTIONS[lang][section]`. As any one of them earns its own bespoke layout (e.g. a real programme grid, speaker cards), promote it into its own `*Page.tsx` and a richer dict.
+- **Page-level copy** (eyebrows, headings, intro paragraphs, section titles) lives in `data/content/*.ts`, each exporting `{ en, es }` keyed by `Lang`. Files: `common.ts`, `home.ts`, `programme.ts`.
+- **Structured, language-neutral data** lives in `data/*.json`: `speakers.json`, `committee.json`, `sponsors.json`. These hold names, affiliations, ISO country codes, photo filenames and URLs — no translatable prose, so they are single-copy and exempt from the parity rule. Loaded via `lib/speakers.ts` and `lib/committee.ts`.
+- All six inner pages now have their own bespoke component (`ProgrammePage`, `SpeakersPage`, `VenuePage`, `RegistrationPage`, `SponsorsPage`, `ContactPage`). The old generic `SectionPage.tsx` + `sections.ts` placeholder scaffolding has been removed. Copy that is specific to one page currently lives inline in that component; promote it into a dict under `data/content/` when it grows.
+- Four home-page blocks double as standalone sections: `SpeakersSection`, `CommitteeSection`, `SponsorsSection`, `AbstractsSection`. Editing one changes both the home page and the corresponding inner route.
 
 Page components in `components/pages/` are server components: they take `lang: Lang`, look up the dict for that language, and render. `Nav`, `Footer`, `LangSwitch` are **client** components that detect lang via `usePathname()` and call `detectLang(pathname)` from `lib/i18n.ts`.
 

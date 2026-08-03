@@ -79,12 +79,13 @@ const en: HomeContent = {
   sponsors_eyebrow: "Main Sponsors and Organizers",
   sponsors_title: "Institutions that make M-ONT possible.",
   abstracts_eyebrow: "Participate",
-  abstracts_title: "Submit an abstract. Apply for a fellowship.",
+  abstracts_title: "Register, submit an abstract, apply for a fellowship.",
   abstracts_body:
-    "Graduate students and postdocs may apply for travel fellowships. Researchers from the region are encouraged to submit abstracts — selected contributions will be featured in the poster session and, potentially, as short talks.",
-  abstracts_open: "Abstract submissions and fellowship applications open 15 July – 31 August 2027.",
-  abstracts_fellowship_btn: "Apply for fellowship",
-  abstracts_abstract_btn: "Submit abstract",
+    "All participants must register and are invited to submit abstracts. Selected submissions will be presented in the poster session, and a small number of contributions may be selected for a short talk within the programme. Early career researchers can additionally apply for an ICGEB fellowship covering meals and accommodation.",
+  abstracts_open:
+    "Registration and abstract submission: 3 August – 30 September 2026, 23:59 Montevideo time (UTC-3).",
+  abstracts_fellowship_btn: "Apply for a fellowship (ICGEB site)",
+  abstracts_abstract_btn: "Registration form (open)",
 };
 
 const es: HomeContent = {
@@ -132,12 +133,13 @@ const es: HomeContent = {
   sponsors_eyebrow: "Sponsors Principales y Organizadores",
   sponsors_title: "Las instituciones que hacen posible M-ONT.",
   abstracts_eyebrow: "Participá",
-  abstracts_title: "Enviá un resumen. Aplicá a una beca.",
+  abstracts_title: "Registrate, enviá un resumen, aplicá a una beca.",
   abstracts_body:
-    "Estudiantes de posgrado y postdocs pueden aplicar a becas de viaje. Se alienta a investigadores de la región a enviar resúmenes — las contribuciones seleccionadas serán presentadas en la sesión de posters y, potencialmente, como charlas breves.",
-  abstracts_open: "El período de envío de resúmenes y solicitud de becas estará abierto del 15 de julio al 31 de agosto de 2027.",
-  abstracts_fellowship_btn: "Aplicar a beca",
-  abstracts_abstract_btn: "Enviar resumen",
+    "Todos los participantes deben registrarse y están invitados a enviar resúmenes. Los resúmenes seleccionados serán presentados en la sesión de posters, y un pequeño número de contribuciones podrá ser seleccionado para una charla breve en el programa. Los investigadores en etapa inicial de carrera pueden además aplicar a una beca del ICGEB que cubre comidas y alojamiento.",
+  abstracts_open:
+    "Registro y envío de resúmenes: 3 de agosto – 30 de septiembre de 2026, 23:59 hora de Montevideo (UTC-3).",
+  abstracts_fellowship_btn: "Aplicar a una beca (sitio del ICGEB)",
+  abstracts_abstract_btn: "Formulario de registro (abierto)",
 };
 
 export const HOME: Record<Lang, HomeContent> = { en, es };

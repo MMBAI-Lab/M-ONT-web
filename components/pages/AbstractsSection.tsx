@@ -1,6 +1,7 @@
 import FadeIn from "@/components/FadeIn";
 import { HOME } from "@/data/content/home";
 import type { Lang } from "@/lib/i18n";
+import { ICGEB_FELLOWSHIP_URL, REGISTRATION_FORM_URL } from "@/lib/links";
 
 export default function AbstractsSection({ lang }: { lang: Lang }) {
   const c = HOME[lang];
@@ -25,21 +26,22 @@ export default function AbstractsSection({ lang }: { lang: Lang }) {
 
         <FadeIn delay={0.1}>
           <div className="mt-8 flex flex-wrap gap-4">
-            {/* Buttons disabled until submission window opens */}
-            <button
-              disabled
-              className="cursor-not-allowed rounded-md border border-border bg-elevated px-5 py-3 text-sm font-medium text-subtle"
-              title="Opens 15 July 2027"
-            >
-              {c.abstracts_fellowship_btn}
-            </button>
-            <button
-              disabled
-              className="cursor-not-allowed rounded-md border border-border bg-elevated px-5 py-3 text-sm font-medium text-subtle"
-              title="Opens 15 July 2027"
+            <a
+              href={REGISTRATION_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-md bg-accent px-5 py-3 text-sm font-medium text-white transition hover:bg-accent-hover"
             >
               {c.abstracts_abstract_btn}
-            </button>
+            </a>
+            <a
+              href={ICGEB_FELLOWSHIP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-md border border-border bg-bg/70 px-5 py-3 text-sm font-medium text-ink transition hover:border-accent hover:text-accent"
+            >
+              {c.abstracts_fellowship_btn}
+            </a>
           </div>
         </FadeIn>
       </div>

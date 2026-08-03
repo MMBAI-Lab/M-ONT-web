@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 import BarsRibbon from "@/components/BarsRibbon";
+import AbstractsSection from "@/components/pages/AbstractsSection";
 import CommitteeSection from "@/components/pages/CommitteeSection";
 import SpeakersSection from "@/components/pages/SpeakersSection";
 import SponsorsSection from "@/components/pages/SponsorsSection";
@@ -219,6 +220,9 @@ export default function HomePage({ lang }: { lang: Lang }) {
 
       {/* MAIN SPONSORS */}
       <SponsorsSection lang={lang} />
+
+      {/* REGISTRATION & ABSTRACTS — mirrors /registration/, live while the window is open */}
+      <AbstractsSection lang={lang} />
     </>
   );
 }
