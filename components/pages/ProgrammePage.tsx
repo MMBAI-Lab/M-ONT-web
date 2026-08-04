@@ -64,8 +64,8 @@ export default function ProgrammePage({ lang }: { lang: Lang }) {
         </h1>
         <p className="mt-4 text-sm font-medium text-subtle">
           {isEs
-            ? "Montevideo, Uruguay · 23–26 de febrero de 2027 · Llegada el lunes 22 · Sujeto a cambios."
-            : "Montevideo, Uruguay · 23–26 February 2027 · Arrival Monday 22 · Subject to change."}
+            ? "Montevideo, Uruguay · 23–26 de febrero de 2027 · Llegada el lunes 22."
+            : "Montevideo, Uruguay · 23–26 February 2027 · Arrival Monday 22."}
         </p>
         {/* Under-construction notice */}
         <div className="mt-6 rounded-lg border border-dashed border-accent/40 bg-accent/5 px-5 py-4 text-sm text-muted">
