@@ -82,12 +82,16 @@ Spanish copy targets Latin American / Uruguayan readers (no voseo unless the ori
 
 ```
 app/                                  App-Router routes; 5-line wrappers around components/pages/
-  page.tsx, programme/, speakers/, venue/,
-  registration/, sponsors/, contact/  English routes (/)
-  es/...                              Spanish routes (/es/...)
-  layout.tsx, globals.css             Root layout + Tailwind base + theme CSS variables
+  (en)/layout.tsx                     Root layout for English: <html lang="en"> + EN metadata
+  (en)/page.tsx, (en)/programme/, …   English routes (/, /programme, …)
+  (es)/layout.tsx                     Root layout for Spanish: <html lang="es"> + ES metadata
+  (es)/es/page.tsx, (es)/es/…         Spanish routes (/es/, /es/programme, …)
+  not-found.tsx                       Bilingual 404; renders its own shell
+  globals.css                         Tailwind base + theme CSS variables
+                                      NB: no app/layout.tsx — see CLAUDE.md
 
 components/
+  RootShell.tsx                       Shared <html>/<body> shell + font loading
   Nav.tsx, Footer.tsx                 Lang-aware (read URL via usePathname)
   LangSwitch.tsx                      Language switcher
   FadeIn.tsx                          framer-motion scroll-in wrapper

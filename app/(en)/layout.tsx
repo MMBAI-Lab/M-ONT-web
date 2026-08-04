@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import Nav from "@/components/Nav";
-import Footer from "@/components/Footer";
-import StickyRibbon from "@/components/StickyRibbon";
+import "../globals.css";
+import RootShell from "@/components/RootShell";
 
+// Root layout for the English tree (/). Its Spanish twin is app/(es)/layout.tsx;
+// the two exist only so `<html lang>` and the metadata can differ per language.
+// Keep them in step — see components/RootShell.tsx.
 export const metadata: Metadata = {
   title: {
     default: "M-ONT — Montevideo Workshop in OligoNucleotide and RNA Therapeutics",
@@ -16,24 +17,16 @@ export const metadata: Metadata = {
     description:
       "International workshop on oligonucleotide and RNA therapeutics — chemistry, biology, and clinical translation.",
     siteName: "M-ONT",
+    locale: "en_US",
     type: "website",
   },
   icons: { icon: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/favicon.ico` },
 };
 
-export default function RootLayout({
+export default function EnRootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <html lang="en">
-      <body className="flex min-h-screen flex-col">
-        <Nav />
-        <StickyRibbon />
-        <main className="flex-1">{children}</main>
-        <Footer />
-      </body>
-    </html>
-  );
+  return <RootShell lang="en">{children}</RootShell>;
 }

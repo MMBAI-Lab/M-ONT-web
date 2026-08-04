@@ -22,9 +22,15 @@
   color-scheme: light;
 }
 
+/* `--font-inter` and `--font-source-serif` are injected by `next/font/google`
+   in app/layout.tsx, which self-hosts both families at build time. Each already
+   resolves to the loaded face plus a metric-matched fallback; the system fonts
+   after it are the last resort. Keep these two lines in sync with the imports
+   in layout.tsx — dropping the var() reference silently reverts the site to
+   Georgia / Segoe UI, which is how it shipped before. */
 :root {
-  --font-sans: "Inter", "Segoe UI", system-ui, sans-serif;
-  --font-serif: "Source Serif 4", "Georgia", serif;
+  --font-sans: var(--font-inter), "Segoe UI", system-ui, sans-serif;
+  --font-serif: var(--font-source-serif), "Georgia", serif;
 }
 
 html {

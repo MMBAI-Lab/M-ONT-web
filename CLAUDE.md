@@ -37,9 +37,28 @@ The site is fully bilingual:
 - English (default) at `/`
 - Spanish at `/es/...`
 
-The two language trees are **parallel directories** under `app/`: every English route at `app/<route>/page.tsx` has a Spanish twin at `app/es/<route>/page.tsx`. Each route file is a 5-line wrapper that imports from `components/pages/` and passes `lang="en"` or `lang="es"`.
+The two language trees live in **route groups with one root layout each**:
 
-To add a new section: create both wrappers (EN and ES), the shared component in `components/pages/`, the dict entry under `data/content/`, and add the section to the `SECTIONS` list in `components/Nav.tsx`.
+```
+app/
+  (en)/layout.tsx      <html lang="en"> + English metadata
+  (en)/page.tsx, (en)/programme/, …        → /, /programme, …
+  (es)/layout.tsx      <html lang="es"> + Spanish metadata
+  (es)/es/page.tsx, (es)/es/programme/, …  → /es, /es/programme, …
+  not-found.tsx        renders its own shell (see below)
+  globals.css
+```
+
+Route groups do not appear in the URL, so `app/(es)/es/programme/page.tsx` still serves `/es/programme/`. Each route file is a 5-line wrapper that imports from `components/pages/` and passes `lang="en"` or `lang="es"`.
+
+**There is deliberately no `app/layout.tsx`.** Only a root layout may render `<html>`, and the `lang` attribute has to differ per tree — so the site has two root layouts, which Next.js permits *only* when nothing sits above them. Adding `app/layout.tsx` back would make both groups nest inside it and silently return every Spanish page to `lang="en"`. The shared `<html>`/`<body>`/nav/footer shell lives in `components/RootShell.tsx`; the two layouts are thin wrappers around it that differ only in `lang` and metadata.
+
+Two consequences worth knowing:
+
+- `app/not-found.tsx` has no layout to nest into, so it renders `RootShell` itself. Without that it falls back to Next's bare 404 — no `lang`, no nav, no fonts. It is bilingual because a static host serves one 404 for every unmatched path.
+- Navigating between the two trees is a full page load, not a client transition. That is already how `LangSwitch` behaves and is fine for a static site.
+
+To add a new section: create both wrappers (`app/(en)/<route>/page.tsx` and `app/(es)/es/<route>/page.tsx`), the shared component in `components/pages/`, the dict entry under `data/content/`, and add the section to the `SECTIONS` list in `components/Nav.tsx`.
 
 ### Content lives in typed dictionaries
 
@@ -65,6 +84,14 @@ Page components in `components/pages/` are server components: they take `lang: L
 The site is **light-only** by user request — there is no dark mode, no `ThemeToggle`, and no `data-theme` switching. If a dark variant is reinstated later, port the structure from `web-danslab` (`:root[data-theme="dark"]`, anti-FOUC bootstrap script in `layout.tsx`, `ThemeToggle` component).
 
 The accent color is cyan-blue (`14 116 144`) — picked to harmonize with the M-ONT logo's left-side gradient. To rebrand, update the three `--accent*` vars in `app/globals.css` together.
+
+### Fonts
+
+**Inter** (sans) and **Source Serif 4** (serif) are loaded via `next/font/google` in `app/layout.tsx`, which downloads and self-hosts them at build time — the export ships the woff2 files under `_next/static/media/` and makes no runtime request to Google. Both are variable fonts, so one face covers the 400–700 range the site uses; there is no `weight` list to maintain. Only the normal style is loaded because nothing on the site is italic — add `style: ["normal", "italic"]` if that changes.
+
+The chain is: `next/font` sets `--font-inter` / `--font-source-serif` on `<html>` → `:root` in `globals.css` composes them into `--font-sans` / `--font-serif` with system fallbacks → `tailwind.config.ts` maps those to `font-sans` / `font-serif`. **All three links are load-bearing**: drop the `var()` reference in `globals.css` and the site silently falls back to Georgia and Segoe UI with no error, which is how it shipped until this was wired up.
+
+The brand handoff package at `../grafica/brand-m-ont/` carries the same two families as installable desktop files, plus the palette. Keep it in sync if the type changes.
 
 ## Conventions worth knowing
 
