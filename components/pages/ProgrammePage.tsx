@@ -1,6 +1,6 @@
 import FadeIn from "@/components/FadeIn";
 
-import { PROGRAMME } from "@/data/content/programme";
+import { PROGRAMME, TALK_LABELS } from "@/data/content/programme";
 import type { Lang } from "@/lib/i18n";
 
 // Colors from the BarsRibbon palette, cycling through for talks
@@ -12,6 +12,9 @@ const TALK_COLORS = [
 // Anchor targets for the at-a-glance strip. Language-neutral and index-based,
 // so the same #hash works on /programme and /es/programme.
 const DAY_IDS = ["mon-22", "tue-23", "wed-24", "thu-25", "fri-26"];
+
+// The school day; its talks are labelled "Lecture" rather than "Talk".
+const SCHOOL_DAY_ID = "tue-23";
 
 // A contiguous run of the chromatogram series (cyan → orange), left to right.
 // All five carry dark ink text at >7:1 contrast, so the row stays uniform.
@@ -25,7 +28,16 @@ const TYPE_STYLES: Record<string, string> = {
   session: "bg-surface border-border/60",
 };
 
-function DaySlots({ slots, dayIndex }: { slots: { time: string; speaker: string | null; title: string | null; type: string }[]; dayIndex: number }) {
+function DaySlots({
+  slots,
+  dayIndex,
+  talkLabel,
+}: {
+  slots: { time: string; speaker: string | null; title: string | null; type: string }[];
+  dayIndex: number;
+  /** "Lecture" / "Talk" (localized), prefixed to every `talk` title. */
+  talkLabel: string;
+}) {
   let colorIdx = dayIndex * 3; // offset per day so colors don't repeat the same start
   return (
     <div className="space-y-2">
@@ -44,6 +56,9 @@ function DaySlots({ slots, dayIndex }: { slots: { time: string; speaker: string 
                   </p>
                 )}
                 <p className={`text-sm leading-snug ${slot.speaker ? "text-muted" : "font-medium text-ink"}`}>
+                  {slot.type === "talk" && (
+                    <span className="font-semibold text-subtle">{talkLabel}: </span>
+                  )}
                   {slot.title}
                 </p>
               </div>
@@ -57,6 +72,7 @@ function DaySlots({ slots, dayIndex }: { slots: { time: string; speaker: string 
 
 export default function ProgrammePage({ lang }: { lang: Lang }) {
   const days = PROGRAMME[lang];
+  const labels = TALK_LABELS[lang];
   const isEs = lang === "es";
 
   return (
@@ -124,7 +140,11 @@ export default function ProgrammePage({ lang }: { lang: Lang }) {
                   {day.kind}
                 </span>
               </div>
-              <DaySlots slots={day.slots} dayIndex={di} />
+              <DaySlots
+                slots={day.slots}
+                dayIndex={di}
+                talkLabel={DAY_IDS[di] === SCHOOL_DAY_ID ? labels.lecture : labels.talk}
+              />
             </div>
           </FadeIn>
         ))}

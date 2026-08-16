@@ -15,6 +15,16 @@ export type DaySchedule = {
   slots: ScheduleEntry[];
 };
 
+/**
+ * Prefix rendered before every `talk` title. The school day (Tuesday) uses the
+ * teaching label, the three workshop days the research one — see ProgrammePage.
+ * Titles in the schedule below stay clean; the prefix is added at render time.
+ */
+export const TALK_LABELS: Record<Lang, { lecture: string; talk: string }> = {
+  en: { lecture: "Lecture", talk: "Talk" },
+  es: { lecture: "Clase", talk: "Charla" },
+};
+
 const en: DaySchedule[] = [
   {
     day: "Monday",
