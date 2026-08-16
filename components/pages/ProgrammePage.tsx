@@ -94,12 +94,13 @@ export default function ProgrammePage({ lang }: { lang: Lang }) {
               key={day.day}
               href={`#${DAY_IDS[di]}`}
               style={{ background: DAY_COLORS[di % DAY_COLORS.length] }}
-              className="group flex flex-col justify-center rounded-xl px-4 py-3.5 text-center transition duration-200 hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
+              className="group flex flex-col justify-center rounded-xl px-2.5 py-3 text-center transition duration-200 hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink md:px-3"
             >
-              <span className="text-sm font-semibold leading-tight text-ink">
+              {/* nowrap so the longest label ("Wednesday 24 Feb") stays on one line */}
+              <span className="whitespace-nowrap text-xs font-semibold leading-tight text-ink">
                 {day.day} {day.date}
               </span>
-              <span className="mt-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-ink/70">
+              <span className="mt-0.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-ink/70">
                 {day.kind}
               </span>
             </a>
