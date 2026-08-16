@@ -9,6 +9,14 @@ const TALK_COLORS = [
   "#F2D550", "#F09850", "#E5634A", "#D14C7B",
 ];
 
+// Anchor targets for the at-a-glance strip. Language-neutral and index-based,
+// so the same #hash works on /programme and /es/programme.
+const DAY_IDS = ["mon-22", "tue-23", "wed-24", "thu-25", "fri-26"];
+
+// A contiguous run of the chromatogram series (cyan → orange), left to right.
+// All five carry dark ink text at >7:1 contrast, so the row stays uniform.
+const DAY_COLORS = ["#3CB4C8", "#6FCFC4", "#A8D659", "#F2D550", "#F09850"];
+
 const TYPE_STYLES: Record<string, string> = {
   talk: "bg-bg border-border/60",
   tbc: "bg-elevated border-dashed border-border",
@@ -75,15 +83,45 @@ export default function ProgrammePage({ lang }: { lang: Lang }) {
         </div>
       </FadeIn>
 
+      {/* At-a-glance day strip — each box jumps to its day below. */}
+      <FadeIn delay={0.08}>
+        <nav
+          aria-label={isEs ? "Resumen por días" : "Day overview"}
+          className="mt-10 grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-5 md:gap-3"
+        >
+          {days.map((day, di) => (
+            <a
+              key={day.day}
+              href={`#${DAY_IDS[di]}`}
+              style={{ background: DAY_COLORS[di % DAY_COLORS.length] }}
+              className="group flex flex-col justify-center rounded-xl px-4 py-3.5 text-center transition duration-200 hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
+            >
+              <span className="text-sm font-semibold leading-tight text-ink">
+                {day.day} {day.date}
+              </span>
+              <span className="mt-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-ink/70">
+                {day.kind}
+              </span>
+            </a>
+          ))}
+        </nav>
+      </FadeIn>
+
       <div className="mt-14 space-y-14">
         {days.map((day, di) => (
           <FadeIn key={day.day} delay={di * 0.06}>
-            <div>
+            <div id={DAY_IDS[di]} className="scroll-mt-24">
               <div className="mb-5 flex items-baseline gap-3">
                 <h2 className="font-serif text-2xl font-semibold text-ink">
                   {day.day}
                 </h2>
                 <span className="text-sm font-medium text-subtle">{day.date}</span>
+                <span
+                  className="ml-auto rounded-full px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-ink"
+                  style={{ background: DAY_COLORS[di % DAY_COLORS.length] }}
+                >
+                  {day.kind}
+                </span>
               </div>
               <DaySlots slots={day.slots} dayIndex={di} />
             </div>
